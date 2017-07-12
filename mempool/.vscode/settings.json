@@ -13,6 +13,9 @@
         "string": "cpp",
         "queue": "cpp",
         "atomic": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "bitset": "cpp",
+        "__bit_reference": "cpp",
+        "ios": "cpp"
     }
 }

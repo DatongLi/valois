@@ -2,7 +2,7 @@
 
 class Node {
 public:
-    bool setCnt(int cnt) { _cnt = cnt; return true; }
+    bool SetCnt(int cnt) { _cnt = cnt; return true; }
     int GetCnt() { return _cnt;}
 
 private:
@@ -12,7 +12,9 @@ private:
 int main() {
     Mempool<Node> mpool(10);
     Node *node = mpool.GetElem();
-    node->setCnt(3);
+    node->SetCnt(3);
+    std::cout << "cnt = " << node->GetCnt() << std::endl;
     mpool.PutElem(node);
+    std::cout << "end" << std::endl;
     return 0;
 }

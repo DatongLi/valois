@@ -1,5 +1,6 @@
 #include "mempool.h"
 
+/* unused
 template<class T>
 T* Mempool<T>::GetElem() {
     long unum = _used_num.load(std::memory_order_acquire);
@@ -20,3 +21,4 @@ bool Mempool<T>::PutElem(T *elem) {
     _freelist.push(elem);
     return true;
 }
+*/
