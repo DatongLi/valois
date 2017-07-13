@@ -1,6 +1,3 @@
-
-
-
 #ifndef _POOL_H
 #define _POOL_H
 
