@@ -16,6 +16,7 @@
         "iterator": "cpp",
         "bitset": "cpp",
         "__bit_reference": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "utility": "cpp"
     }
 }
