@@ -1,16 +1,19 @@
 #include "base/common.h"
+#include "base/pool.h"
 
 template<class T>
-class Mempool {
+class Mempool : public Pool<T> {
 public:
+    Mempool() : _used_num(0), _elem_num(0) {}
+
     Mempool(long elem_num) :
     _used_num(0), _elem_num(elem_num)
     {
-        char *_buf = new char[alignSizeOf(sizeof(T)) * elem_num];
-        for(long i = 0; i < elem_num; ++i) {
-            _freelist.push(new (_buf + sizeof(T) + _align_gap) T());
+        if(false == createPool(elem_num)) {
+            std::cout << "init pool failed" << std::endl;
         }
     }
+
     ~Mempool() {
         if(_used_num > 0) {
             std::cout << "Failed to release all elem in mempool, memory leak!" << std::endl;
@@ -23,6 +26,8 @@ public:
         }
     }
     Mempool(const Mempool&) = delete;
+
+    bool createPool(long elem_num);
 
     T* getElem();
     bool putElem(T* elem);
@@ -40,6 +45,16 @@ private:
     std::atomic<long> _used_num;
     std::queue<T *> _freelist;
 };
+
+template<class T>
+bool Mempool<T>::createPool(long elem_num) {
+    char *_buf = new char[alignSizeOf(sizeof(T)) * elem_num];
+    if(_buf == nullptr) {return false;}
+    for(long i = 0; i < elem_num; ++i) {
+        _freelist.push(new (_buf + sizeof(T) + _align_gap) T());
+    }
+    return true;
+}
 
 template<class T>
 T* Mempool<T>::getElem() {
