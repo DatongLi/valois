@@ -1,1 +1,1 @@
-g++ -o mempool/output/TestMempool mempool/example/TestMempool.cpp -I. -Imempool/src -std=c++11
+g++ -g -O0 -o mempool/output/TestMempool mempool/example/TestMempool.cpp -I. -Imempool/src -std=c++11
