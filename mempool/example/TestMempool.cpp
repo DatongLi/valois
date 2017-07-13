@@ -11,10 +11,10 @@ private:
 
 int main() {
     Mempool<Node> mpool(10);
-    Node *node = mpool.GetElem();
+    Node *node = mpool.getElem();
     node->SetCnt(3);
     std::cout << "cnt = " << node->GetCnt() << std::endl;
-    mpool.PutElem(node);
+    mpool.putElem(node);
     std::cout << "end" << std::endl;
     return 0;
 }

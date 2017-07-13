@@ -17,6 +17,8 @@
         "bitset": "cpp",
         "__bit_reference": "cpp",
         "ios": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "cmath": "cpp",
+        "memory": "cpp"
     }
 }

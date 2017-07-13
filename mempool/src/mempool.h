@@ -6,8 +6,9 @@ public:
     Mempool(long elem_num) :
     _used_num(0), _elem_num(elem_num)
     {
+        char *_buf = new char[alignSizeOf(sizeof(T)) * elem_num];
         for(long i = 0; i < elem_num; ++i) {
-            _freelist.push(new T());
+            _freelist.push(new (_buf + sizeof(T) + _align_gap) T());
         }
     }
     ~Mempool() {
@@ -18,22 +19,30 @@ public:
         for(int i = 0; i < _freelist.size(); ++i) {
             elem = _freelist.front();
             _freelist.pop();
-            delete elem;
+            elem->~T();
         }
     }
     Mempool(const Mempool&) = delete;
 
-    T* GetElem();
-    bool PutElem(T* elem);
+    T* getElem();
+    bool putElem(T* elem);
 
 private:
+    int alignSizeOf(int object_size) {
+        int size = floor(log2(object_size)) + 1;
+        int real_size = exp2(size);
+        _align_gap = real_size - object_size;
+        return real_size;
+    }
+
+    int _align_gap;
     long _elem_num;
     std::atomic<long> _used_num;
     std::queue<T *> _freelist;
 };
 
 template<class T>
-T* Mempool<T>::GetElem() {
+T* Mempool<T>::getElem() {
     long unum = _used_num.load(std::memory_order_acquire);
     if(unum < _elem_num) {
         _used_num.fetch_add(1, std::memory_order_release);
@@ -47,7 +56,7 @@ T* Mempool<T>::GetElem() {
 }
 
 template<class T>
-bool Mempool<T>::PutElem(T *elem) {
+bool Mempool<T>::putElem(T *elem) {
     _used_num.fetch_sub(1, std::memory_order_release);
     _freelist.push(elem);
     return true;
