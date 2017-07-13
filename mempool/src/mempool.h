@@ -1,6 +1,11 @@
 #include "base/common.h"
 #include "base/pool.h"
 
+#ifndef _MEMPOOL_H
+#define _MEMPOOL_H
+
+namespace base {
+
 template<class T>
 class Mempool : public Pool<T> {
 public:
@@ -76,3 +81,5 @@ bool Mempool<T>::putElem(T *elem) {
     _freelist.push(elem);
     return true;
 }
+}
+#endif

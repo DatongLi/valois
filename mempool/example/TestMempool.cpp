@@ -10,7 +10,7 @@ private:
 };
 
 int main() {
-    Mempool<Node> mpool(10);
+    base::Mempool<Node> mpool(10);
     Node *node = mpool.getElem();
     node->SetCnt(3);
     std::cout << "cnt = " << node->GetCnt() << std::endl;

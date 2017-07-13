@@ -6,6 +6,8 @@
 
 #include "common.h"
 
+namespace base {
+
 template<class T>
 class Pool {
 public:
@@ -13,5 +15,7 @@ public:
     virtual T* getElem() = 0;
     virtual bool putElem(T* elem) = 0;
 };
+
+}
 
 #endif
