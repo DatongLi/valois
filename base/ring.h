@@ -65,7 +65,7 @@ public:
     }
 
     T pop() {
-        SpinLock _lock;
+        ScopeSpinLock _lock;
         if((_head - _tail - 1 + len) % len == 0) return nullptr;
         //std::cout << "head " << _head << std::endl;
         //std::cout << "pop " << _arr[_head] << std::endl;
@@ -76,7 +76,7 @@ public:
     }
 
     bool push(const T &tp) {
-        SpinLock _lock;
+        ScopeSpinLock _lock;
         if((_head - _tail + 1 + len) % len == 0) return false;
         if(_head == _tail) {
             if(nullptr == _arr[_head]) {

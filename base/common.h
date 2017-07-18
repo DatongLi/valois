@@ -10,6 +10,7 @@
 #include <algorithm>
 #include <array>
 #include <mutex>
+#include <condition_variable>
 
 namespace base {
 
