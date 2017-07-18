@@ -25,7 +25,10 @@ static void setValue(T (&arr)[N], const T& val)
     std::fill(arr, arr + N, val);
 }
 
-/* high performance light mutex 50x than std::Mutex at least , implement the lock free */
+/* high performance light mutex 100x more than std::Mutex at least , implement the lock free 
+ * std::mutex = 600ns~1.4us, the high performance light mutex = 13ns~30ns
+ * http://preshing.com/20120226/roll-your-own-lightweight-mutex/
+ */
 class ScopeSpinLock {
     std::atomic_flag locked = ATOMIC_FLAG_INIT ;
 public:
