@@ -74,7 +74,7 @@ template<class T>
 T* Mempool<T>::getElem() {
     long unum = _used_num.load(std::memory_order_acquire);
     if(unum < _elem_num && _elem_num > 0) {
-        _used_num.fetch_add(1, std::memory_order_release);
+        _used_num.fetch_add(1, std::memory_order_relaxed);
         T* elem = _freelist->pop();
         return elem;
     } else {
@@ -87,7 +87,7 @@ template<class T>
 bool Mempool<T>::putElem(T *elem) {
     long unum = _used_num.load(std::memory_order_acquire);
     if(unum < _elem_num && _elem_num > 0) {
-        _used_num.fetch_sub(1, std::memory_order_release);
+        _used_num.fetch_sub(1, std::memory_order_relaxed);
         _freelist->push(elem);
     } else {
         std::cout << "mempool full" << std::endl;
