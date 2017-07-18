@@ -19,6 +19,10 @@
         "vector": "cpp",
         "array": "cpp",
         "bitset": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "__mutex_base": "cpp",
+        "memory": "cpp",
+        "mutex": "cpp",
+        "system_error": "cpp"
     }
 }

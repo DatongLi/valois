@@ -11,12 +11,13 @@ private:
 
 int main() {
     base::Mempool<Node> mpool(10);
-    Node *node = mpool.getElem();
+    Node *node;
+    mpool.getElem(node);
     node->SetCnt(3);
     std::cout << "cnt = " << node->GetCnt() << std::endl;
     mpool.putElem(node);
 
-    node = mpool.getElem();
+    mpool.getElem(node);
     node->SetCnt(5);
     std::cout << "cnt = " << node->GetCnt() << std::endl;
     mpool.putElem(node);
