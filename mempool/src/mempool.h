@@ -51,7 +51,7 @@ private:
     long _elem_num;
     std::atomic<long> _used_num;
     Ring<T *> *_freelist;
-    ScopeSpinLock _list_lock;
+    //SpinLock _list_lock; /*no need for global lock, promote performance in the same time get&put*/
 };
 
 template<class T>
@@ -73,7 +73,7 @@ bool Mempool<T>::createPool(long elem_num) {
 
 template<class T>
 bool Mempool<T>::getElem(T* elem) {
-    _list_lock.lock();
+    SpinLock _list_lock;
     if(_used_num.load(std::memory_order_acquire) < _elem_num && _elem_num > 0) {
         _used_num.fetch_add(1, std::memory_order_release);
         elem = _freelist->pop();
@@ -86,7 +86,7 @@ bool Mempool<T>::getElem(T* elem) {
 
 template<class T>
 bool Mempool<T>::putElem(T *elem) {
-    _list_lock.lock();
+    SpinLock _list_lock;
     if(_used_num.load(std::memory_order_acquire) > 0 && _elem_num > 0) {
         _used_num.fetch_sub(1, std::memory_order_release);
         _freelist->push(elem);

@@ -32,6 +32,9 @@ static void setValue(T (&arr)[N], const T& val)
 class ScopeSpinLock {
     std::atomic_flag locked = ATOMIC_FLAG_INIT ;
 public:
+    ScopeSpinLock() {
+        lock();
+    }
 
     ~ScopeSpinLock() {
         if(!locked.test_and_set(std::memory_order_acquire)){
@@ -39,6 +42,7 @@ public:
         }
     }
 
+private:
     void lock() {
         while (locked.test_and_set(std::memory_order_acquire)) { ; }
     }
