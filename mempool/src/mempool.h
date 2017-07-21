@@ -36,7 +36,7 @@ public:
 
     bool createPool(long elem_num);
 
-    bool getElem(T* elem);
+    bool getElem(T* &elem);
     bool putElem(T* elem);
 
 private:
@@ -58,7 +58,7 @@ template<class T>
 bool Mempool<T>::createPool(long elem_num) {
     T *p;
     _freelist = new Ring<T *>(elem_num);
-#if 0
+#if 1
     char *_buf = new char[alignSizeOf(sizeof(T)) * elem_num];
     if(_buf == nullptr) {return false;}
     for(long i = 0; i < elem_num; ++i) {
@@ -82,7 +82,7 @@ bool Mempool<T>::createPool(long elem_num) {
 }
 
 template<class T>
-bool Mempool<T>::getElem(T* elem) {
+bool Mempool<T>::getElem(T* &elem) {
     ScopeSpinLock _list_lock;
     if(_used_num.load(std::memory_order_acquire) < _elem_num && _elem_num > 0) {
         _used_num.fetch_add(1, std::memory_order_release);
