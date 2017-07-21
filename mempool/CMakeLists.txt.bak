@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 2.8)
+
+SET(CMAKE_C_COMPILER "g++")
+
+enable_testing()
+find_package (Threads)
+include_directories(third-64/gtest/include src)
+link_directories(third-64/gtest/lib)
+link_directories(/usr/local/lib)
+add_executable(output/gtest_test src/test.cpp ./unittest/gtest_test.cpp)
+target_link_libraries(output/gtest_test 
+"-Wl,--whole-archive"
+gtest_main
+gtest
+"-Wl,--no-whole-archive") #注意这里
+target_link_libraries(output/gtest_test ${CMAKE_THREAD_LIBS_INIT})
+add_test(NAME output/gtest_test COMMAND output/gtest_test)
