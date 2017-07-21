@@ -58,6 +58,7 @@ template<class T>
 bool Mempool<T>::createPool(long elem_num) {
     T *p;
     _freelist = new Ring<T *>(elem_num);
+#if 0
     char *_buf = new char[alignSizeOf(sizeof(T)) * elem_num];
     if(_buf == nullptr) {return false;}
     for(long i = 0; i < elem_num; ++i) {
@@ -68,6 +69,15 @@ bool Mempool<T>::createPool(long elem_num) {
             return false;
         }
     }
+#else
+    for(long i = 0; i < elem_num; ++i) {
+        p = new T();
+        if(false == _freelist->push(p)) {
+            std::cout << "list push failed" << std::endl;
+            return false;
+        }
+    }
+#endif
     return true;
 }
 
