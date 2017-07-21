@@ -219,35 +219,59 @@ gtest_main/fast:
 	$(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-# target to build an object file
-mempool/src/test.o:
-	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o
+mempool/src/test.o: mempool/src/test.cpp.o
+
 .PHONY : mempool/src/test.o
 
-# target to preprocess a source file
-mempool/src/test.i:
-	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.i
+# target to build an object file
+mempool/src/test.cpp.o:
+	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o
+.PHONY : mempool/src/test.cpp.o
+
+mempool/src/test.i: mempool/src/test.cpp.i
+
 .PHONY : mempool/src/test.i
 
-# target to generate assembly for a file
-mempool/src/test.s:
-	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.s
+# target to preprocess a source file
+mempool/src/test.cpp.i:
+	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.i
+.PHONY : mempool/src/test.cpp.i
+
+mempool/src/test.s: mempool/src/test.cpp.s
+
 .PHONY : mempool/src/test.s
 
-# target to build an object file
-mempool/unittest/gtest_test.o:
-	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o
+# target to generate assembly for a file
+mempool/src/test.cpp.s:
+	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.s
+.PHONY : mempool/src/test.cpp.s
+
+mempool/unittest/gtest_test.o: mempool/unittest/gtest_test.cpp.o
+
 .PHONY : mempool/unittest/gtest_test.o
 
-# target to preprocess a source file
-mempool/unittest/gtest_test.i:
-	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.i
+# target to build an object file
+mempool/unittest/gtest_test.cpp.o:
+	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o
+.PHONY : mempool/unittest/gtest_test.cpp.o
+
+mempool/unittest/gtest_test.i: mempool/unittest/gtest_test.cpp.i
+
 .PHONY : mempool/unittest/gtest_test.i
 
-# target to generate assembly for a file
-mempool/unittest/gtest_test.s:
-	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.s
+# target to preprocess a source file
+mempool/unittest/gtest_test.cpp.i:
+	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.i
+.PHONY : mempool/unittest/gtest_test.cpp.i
+
+mempool/unittest/gtest_test.s: mempool/unittest/gtest_test.cpp.s
+
 .PHONY : mempool/unittest/gtest_test.s
+
+# target to generate assembly for a file
+mempool/unittest/gtest_test.cpp.s:
+	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.s
+.PHONY : mempool/unittest/gtest_test.cpp.s
 
 # Help Target
 help:

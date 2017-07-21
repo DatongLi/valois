@@ -57,64 +57,64 @@ include CMakeFiles/mempool/output/gtest_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mempool/output/gtest_test.dir/flags.make
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o: CMakeFiles/mempool/output/gtest_test.dir/flags.make
-CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o: mempool/src/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/libpool/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o -c /home/lidatong/work/libpool/mempool/src/test.cpp
+CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o: CMakeFiles/mempool/output/gtest_test.dir/flags.make
+CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o: mempool/src/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/libpool/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o -c /home/lidatong/work/libpool/mempool/src/test.cpp
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/libpool/mempool/src/test.cpp > CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.i
+CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/libpool/mempool/src/test.cpp > CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.i
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/libpool/mempool/src/test.cpp -o CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.s
+CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/libpool/mempool/src/test.cpp -o CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.s
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o.requires:
+CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o.requires:
 
-.PHONY : CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o.requires
+.PHONY : CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o.requires
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o.provides: CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o.requires
-	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o.provides.build
-.PHONY : CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o.provides
+CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o.provides: CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o.requires
+	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o.provides.build
+.PHONY : CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o.provides
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o.provides.build: CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o
+CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o.provides.build: CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o
 
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o: CMakeFiles/mempool/output/gtest_test.dir/flags.make
-CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o: mempool/unittest/gtest_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/libpool/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o -c /home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp
+CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o: CMakeFiles/mempool/output/gtest_test.dir/flags.make
+CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o: mempool/unittest/gtest_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/libpool/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o -c /home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp > CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.i
+CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp > CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.i
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp -o CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.s
+CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp -o CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.s
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o.requires:
+CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o.requires:
 
-.PHONY : CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o.requires
+.PHONY : CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o.requires
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o.provides: CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o.requires
-	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o.provides.build
-.PHONY : CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o.provides
+CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o.provides: CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o.requires
+	$(MAKE) -f CMakeFiles/mempool/output/gtest_test.dir/build.make CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o.provides.build
+.PHONY : CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o.provides
 
-CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o.provides.build: CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o
+CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o.provides.build: CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o
 
 
 # Object files for target mempool/output/gtest_test
 mempool/output/gtest_test_OBJECTS = \
-"CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o" \
-"CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o"
+"CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o" \
+"CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o"
 
 # External object files for target mempool/output/gtest_test
 mempool/output/gtest_test_EXTERNAL_OBJECTS =
 
-mempool/output/gtest_test: CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o
-mempool/output/gtest_test: CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o
+mempool/output/gtest_test: CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o
+mempool/output/gtest_test: CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o
 mempool/output/gtest_test: CMakeFiles/mempool/output/gtest_test.dir/build.make
 mempool/output/gtest_test: thirdparty/googletest-build/googlemock/gtest/libgtest_main.a
 mempool/output/gtest_test: thirdparty/googletest-build/googlemock/gtest/libgtest.a
@@ -127,8 +127,8 @@ CMakeFiles/mempool/output/gtest_test.dir/build: mempool/output/gtest_test
 
 .PHONY : CMakeFiles/mempool/output/gtest_test.dir/build
 
-CMakeFiles/mempool/output/gtest_test.dir/requires: CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o.requires
-CMakeFiles/mempool/output/gtest_test.dir/requires: CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o.requires
+CMakeFiles/mempool/output/gtest_test.dir/requires: CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o.requires
+CMakeFiles/mempool/output/gtest_test.dir/requires: CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o.requires
 
 .PHONY : CMakeFiles/mempool/output/gtest_test.dir/requires
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o"
-  "CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o"
+  "CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o"
+  "CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o"
   "mempool/output/gtest_test.pdb"
   "mempool/output/gtest_test"
 )

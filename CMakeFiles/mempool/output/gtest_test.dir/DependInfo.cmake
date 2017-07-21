@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lidatong/work/libpool/mempool/src/test.cpp" "/home/lidatong/work/libpool/CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.o"
-  "/home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp" "/home/lidatong/work/libpool/CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.o"
+  "/home/lidatong/work/libpool/mempool/src/test.cpp" "/home/lidatong/work/libpool/CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o"
+  "/home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp" "/home/lidatong/work/libpool/CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
