@@ -10,6 +10,9 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "mempool/src"
+  "threadpool/src"
+  "."
   "thirdparty/googletest-src/googletest/include"
   "thirdparty/googletest-src/googletest"
   )

@@ -2,6 +2,8 @@
 
 class Node {
 public:
+    Node():_cnt(0) {}
+    ~Node() {}
     bool SetCnt(int cnt) { _cnt = cnt; return true; }
     int GetCnt() { return _cnt;}
 

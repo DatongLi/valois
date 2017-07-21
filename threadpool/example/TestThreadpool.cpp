@@ -9,7 +9,7 @@ void printB() {
 }
 
 int main() {
-    Threadpool tpool;
+    base::Threadpool tpool;
     tpool.submit(printA);
     tpool.submit(printB);
     tpool.submit(printB);
