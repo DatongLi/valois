@@ -6,8 +6,8 @@ include(ExternalProject)
 ExternalProject_Add(googletest
   GIT_REPOSITORY    https://github.com/google/googletest.git
   GIT_TAG           master
-  SOURCE_DIR        "${CMAKE_BINARY_DIR}/thirdparty/googletest-src"
-  BINARY_DIR        "${CMAKE_BINARY_DIR}/thirdparty/googletest-build"
+  SOURCE_DIR        "/home/lidatong/work/libpool/thirdparty/googletest-src"
+  BINARY_DIR        "/home/lidatong/work/libpool/thirdparty/googletest-build"
   CONFIGURE_COMMAND ""
   BUILD_COMMAND     ""
   INSTALL_COMMAND   ""
