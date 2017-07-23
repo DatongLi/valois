@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidatong/work/libpool
+CMAKE_SOURCE_DIR = /home/lidatong/work/fastrpc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidatong/work/libpool
+CMAKE_BINARY_DIR = /home/lidatong/work/fastrpc
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,17 +100,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -124,9 +113,9 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/libpool/CMakeFiles /home/lidatong/work/libpool/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/fastrpc/CMakeFiles /home/lidatong/work/fastrpc/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/libpool/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/fastrpc/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -363,7 +352,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... install/strip"
 	@echo "... mempool/output/TestMempool"
 	@echo "... mempool/output/gtest_test"
 	@echo "... threadpool/output/TestThreadpool"

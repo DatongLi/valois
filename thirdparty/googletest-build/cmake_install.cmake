@@ -1,4 +1,4 @@
-# Install script for directory: /home/lidatong/work/libpool/thirdparty/googletest-src
+# Install script for directory: /home/lidatong/work/fastrpc/thirdparty/googletest-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lidatong/work/libpool/thirdparty/googletest-build/googlemock/cmake_install.cmake")
+  include("/home/lidatong/work/fastrpc/thirdparty/googletest-build/googlemock/cmake_install.cmake")
 
 endif()
 

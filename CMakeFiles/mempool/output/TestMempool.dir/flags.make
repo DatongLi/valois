@@ -6,5 +6,5 @@ CXX_FLAGS =   -g -O0 -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lidatong/work/libpool/mempool/src -I/home/lidatong/work/libpool/threadpool/src -I/home/lidatong/work/libpool/. 
+CXX_INCLUDES = -I/home/lidatong/work/fastrpc/mempool/src -I/home/lidatong/work/fastrpc/threadpool/src -I/home/lidatong/work/fastrpc/. 
 

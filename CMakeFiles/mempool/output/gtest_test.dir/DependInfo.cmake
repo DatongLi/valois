@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lidatong/work/libpool/mempool/src/test.cpp" "/home/lidatong/work/libpool/CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o"
-  "/home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp" "/home/lidatong/work/libpool/CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o"
+  "/home/lidatong/work/fastrpc/mempool/src/test.cpp" "/home/lidatong/work/fastrpc/CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o"
+  "/home/lidatong/work/fastrpc/mempool/unittest/gtest_test.cpp" "/home/lidatong/work/fastrpc/CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,8 +19,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lidatong/work/libpool/thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "/home/lidatong/work/libpool/thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/lidatong/work/fastrpc/thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/home/lidatong/work/fastrpc/thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

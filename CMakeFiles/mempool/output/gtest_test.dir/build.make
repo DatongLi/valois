@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidatong/work/libpool
+CMAKE_SOURCE_DIR = /home/lidatong/work/fastrpc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidatong/work/libpool
+CMAKE_BINARY_DIR = /home/lidatong/work/fastrpc
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mempool/output/gtest_test.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/mempool/output/gtest_test.dir/flags.make
 
 CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o: CMakeFiles/mempool/output/gtest_test.dir/flags.make
 CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o: mempool/src/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/libpool/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o -c /home/lidatong/work/libpool/mempool/src/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/fastrpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o -c /home/lidatong/work/fastrpc/mempool/src/test.cpp
 
 CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/libpool/mempool/src/test.cpp > CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/fastrpc/mempool/src/test.cpp > CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.i
 
 CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/libpool/mempool/src/test.cpp -o CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/fastrpc/mempool/src/test.cpp -o CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.s
 
 CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/mempool/output/gtest_test.dir/mempool/src/test.cpp.o.provides.build: 
 
 CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o: CMakeFiles/mempool/output/gtest_test.dir/flags.make
 CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o: mempool/unittest/gtest_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/libpool/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o -c /home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/fastrpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o -c /home/lidatong/work/fastrpc/mempool/unittest/gtest_test.cpp
 
 CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp > CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/fastrpc/mempool/unittest/gtest_test.cpp > CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.i
 
 CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/libpool/mempool/unittest/gtest_test.cpp -o CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/fastrpc/mempool/unittest/gtest_test.cpp -o CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.s
 
 CMakeFiles/mempool/output/gtest_test.dir/mempool/unittest/gtest_test.cpp.o.requires:
 
@@ -119,7 +119,7 @@ mempool/output/gtest_test: CMakeFiles/mempool/output/gtest_test.dir/build.make
 mempool/output/gtest_test: thirdparty/googletest-build/googlemock/gtest/libgtest_main.a
 mempool/output/gtest_test: thirdparty/googletest-build/googlemock/gtest/libgtest.a
 mempool/output/gtest_test: CMakeFiles/mempool/output/gtest_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidatong/work/libpool/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable mempool/output/gtest_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidatong/work/fastrpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable mempool/output/gtest_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mempool/output/gtest_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -137,6 +137,6 @@ CMakeFiles/mempool/output/gtest_test.dir/clean:
 .PHONY : CMakeFiles/mempool/output/gtest_test.dir/clean
 
 CMakeFiles/mempool/output/gtest_test.dir/depend:
-	cd /home/lidatong/work/libpool && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidatong/work/libpool /home/lidatong/work/libpool /home/lidatong/work/libpool /home/lidatong/work/libpool /home/lidatong/work/libpool/CMakeFiles/mempool/output/gtest_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lidatong/work/fastrpc && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidatong/work/fastrpc /home/lidatong/work/fastrpc /home/lidatong/work/fastrpc /home/lidatong/work/fastrpc /home/lidatong/work/fastrpc/CMakeFiles/mempool/output/gtest_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/mempool/output/gtest_test.dir/depend
 

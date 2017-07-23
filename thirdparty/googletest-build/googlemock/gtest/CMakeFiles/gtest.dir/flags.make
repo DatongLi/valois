@@ -6,5 +6,5 @@ CXX_FLAGS =   -g -O0  -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lidatong/work/libpool/mempool/src -I/home/lidatong/work/libpool/threadpool/src -I/home/lidatong/work/libpool/. -I/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/include -I/home/lidatong/work/libpool/thirdparty/googletest-src/googletest 
+CXX_INCLUDES = -I/home/lidatong/work/fastrpc/mempool/src -I/home/lidatong/work/fastrpc/threadpool/src -I/home/lidatong/work/fastrpc/. -I/home/lidatong/work/fastrpc/thirdparty/googletest-src/googletest/include -I/home/lidatong/work/fastrpc/thirdparty/googletest-src/googletest 
 

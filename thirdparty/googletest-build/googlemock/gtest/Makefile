@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidatong/work/libpool
+CMAKE_SOURCE_DIR = /home/lidatong/work/fastrpc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidatong/work/libpool
+CMAKE_BINARY_DIR = /home/lidatong/work/fastrpc
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -89,17 +89,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -111,27 +100,27 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : install/strip/fast
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidatong/work/libpool && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/libpool/CMakeFiles /home/lidatong/work/libpool/thirdparty/googletest-build/googlemock/gtest/CMakeFiles/progress.marks
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/libpool/CMakeFiles 0
+	cd /home/lidatong/work/fastrpc && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/fastrpc/CMakeFiles /home/lidatong/work/fastrpc/thirdparty/googletest-build/googlemock/gtest/CMakeFiles/progress.marks
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/fastrpc/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/clean
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +130,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/preinstall
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/preinstall
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidatong/work/libpool && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidatong/work/fastrpc && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/rule:
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/rule
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/rule
 .PHONY : thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -166,12 +155,12 @@ gtest: thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/rule
 
 # fast build rule for target.
 gtest/fast:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 # Convenience name for target.
 thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/rule:
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 .PHONY : thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -181,7 +170,7 @@ gtest_main: thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.d
 
 # fast build rule for target.
 gtest_main/fast:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 src/gtest-all.o: src/gtest-all.cc.o
@@ -190,7 +179,7 @@ src/gtest-all.o: src/gtest-all.cc.o
 
 # target to build an object file
 src/gtest-all.cc.o:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
 .PHONY : src/gtest-all.cc.o
 
 src/gtest-all.i: src/gtest-all.cc.i
@@ -199,7 +188,7 @@ src/gtest-all.i: src/gtest-all.cc.i
 
 # target to preprocess a source file
 src/gtest-all.cc.i:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
 .PHONY : src/gtest-all.cc.i
 
 src/gtest-all.s: src/gtest-all.cc.s
@@ -208,7 +197,7 @@ src/gtest-all.s: src/gtest-all.cc.s
 
 # target to generate assembly for a file
 src/gtest-all.cc.s:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
 .PHONY : src/gtest-all.cc.s
 
 src/gtest_main.o: src/gtest_main.cc.o
@@ -217,7 +206,7 @@ src/gtest_main.o: src/gtest_main.cc.o
 
 # target to build an object file
 src/gtest_main.cc.o:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
 .PHONY : src/gtest_main.cc.o
 
 src/gtest_main.i: src/gtest_main.cc.i
@@ -226,7 +215,7 @@ src/gtest_main.i: src/gtest_main.cc.i
 
 # target to preprocess a source file
 src/gtest_main.cc.i:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
 .PHONY : src/gtest_main.cc.i
 
 src/gtest_main.s: src/gtest_main.cc.s
@@ -235,7 +224,7 @@ src/gtest_main.s: src/gtest_main.cc.s
 
 # target to generate assembly for a file
 src/gtest_main.cc.s:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
 .PHONY : src/gtest_main.cc.s
 
 # Help Target
@@ -248,10 +237,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... gtest"
+	@echo "... edit_cache"
 	@echo "... gtest_main"
 	@echo "... install/local"
-	@echo "... edit_cache"
-	@echo "... install/strip"
 	@echo "... src/gtest-all.o"
 	@echo "... src/gtest-all.i"
 	@echo "... src/gtest-all.s"
@@ -269,6 +257,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidatong/work/libpool && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidatong/work/fastrpc && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

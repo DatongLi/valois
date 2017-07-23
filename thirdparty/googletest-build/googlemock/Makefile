@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidatong/work/libpool
+CMAKE_SOURCE_DIR = /home/lidatong/work/fastrpc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidatong/work/libpool
+CMAKE_BINARY_DIR = /home/lidatong/work/fastrpc
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -111,27 +111,16 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidatong/work/libpool && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/libpool/CMakeFiles /home/lidatong/work/libpool/thirdparty/googletest-build/googlemock/CMakeFiles/progress.marks
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/libpool/CMakeFiles 0
+	cd /home/lidatong/work/fastrpc && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/fastrpc/CMakeFiles /home/lidatong/work/fastrpc/thirdparty/googletest-build/googlemock/CMakeFiles/progress.marks
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/fastrpc/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/clean
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +130,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/preinstall
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/preinstall
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lidatong/work/libpool && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidatong/work/fastrpc && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/rule:
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
 .PHONY : thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -166,12 +155,12 @@ gmock: thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/rule
 
 # fast build rule for target.
 gmock/fast:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 # Convenience name for target.
 thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule:
-	cd /home/lidatong/work/libpool && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
 .PHONY : thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -181,7 +170,7 @@ gmock_main: thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/rul
 
 # fast build rule for target.
 gmock_main/fast:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 __/googletest/src/gtest-all.o: __/googletest/src/gtest-all.cc.o
@@ -190,8 +179,8 @@ __/googletest/src/gtest-all.o: __/googletest/src/gtest-all.cc.o
 
 # target to build an object file
 __/googletest/src/gtest-all.cc.o:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o
 .PHONY : __/googletest/src/gtest-all.cc.o
 
 __/googletest/src/gtest-all.i: __/googletest/src/gtest-all.cc.i
@@ -200,8 +189,8 @@ __/googletest/src/gtest-all.i: __/googletest/src/gtest-all.cc.i
 
 # target to preprocess a source file
 __/googletest/src/gtest-all.cc.i:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.i
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.i
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.i
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.i
 .PHONY : __/googletest/src/gtest-all.cc.i
 
 __/googletest/src/gtest-all.s: __/googletest/src/gtest-all.cc.s
@@ -210,8 +199,8 @@ __/googletest/src/gtest-all.s: __/googletest/src/gtest-all.cc.s
 
 # target to generate assembly for a file
 __/googletest/src/gtest-all.cc.s:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.s
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.s
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.s
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.s
 .PHONY : __/googletest/src/gtest-all.cc.s
 
 src/gmock-all.o: src/gmock-all.cc.o
@@ -220,8 +209,8 @@ src/gmock-all.o: src/gmock-all.cc.o
 
 # target to build an object file
 src/gmock-all.cc.o:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o
 .PHONY : src/gmock-all.cc.o
 
 src/gmock-all.i: src/gmock-all.cc.i
@@ -230,8 +219,8 @@ src/gmock-all.i: src/gmock-all.cc.i
 
 # target to preprocess a source file
 src/gmock-all.cc.i:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.i
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.i
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.i
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.i
 .PHONY : src/gmock-all.cc.i
 
 src/gmock-all.s: src/gmock-all.cc.s
@@ -240,8 +229,8 @@ src/gmock-all.s: src/gmock-all.cc.s
 
 # target to generate assembly for a file
 src/gmock-all.cc.s:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.s
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.s
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.s
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.s
 .PHONY : src/gmock-all.cc.s
 
 src/gmock_main.o: src/gmock_main.cc.o
@@ -250,7 +239,7 @@ src/gmock_main.o: src/gmock_main.cc.o
 
 # target to build an object file
 src/gmock_main.cc.o:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
 .PHONY : src/gmock_main.cc.o
 
 src/gmock_main.i: src/gmock_main.cc.i
@@ -259,7 +248,7 @@ src/gmock_main.i: src/gmock_main.cc.i
 
 # target to preprocess a source file
 src/gmock_main.cc.i:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
 .PHONY : src/gmock_main.cc.i
 
 src/gmock_main.s: src/gmock_main.cc.s
@@ -268,7 +257,7 @@ src/gmock_main.s: src/gmock_main.cc.s
 
 # target to generate assembly for a file
 src/gmock_main.cc.s:
-	cd /home/lidatong/work/libpool && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
+	cd /home/lidatong/work/fastrpc && $(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
 .PHONY : src/gmock_main.cc.s
 
 # Help Target
@@ -284,7 +273,6 @@ help:
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... edit_cache"
-	@echo "... install/strip"
 	@echo "... __/googletest/src/gtest-all.o"
 	@echo "... __/googletest/src/gtest-all.i"
 	@echo "... __/googletest/src/gtest-all.s"
@@ -305,6 +293,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lidatong/work/libpool && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidatong/work/fastrpc && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

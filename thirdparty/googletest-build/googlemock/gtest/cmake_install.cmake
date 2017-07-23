@@ -1,4 +1,4 @@
-# Install script for directory: /home/lidatong/work/libpool/thirdparty/googletest-src/googletest
+# Install script for directory: /home/lidatong/work/fastrpc/thirdparty/googletest-src/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,14 +33,14 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/lidatong/work/libpool/thirdparty/googletest-build/googlemock/gtest/libgtest.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/lidatong/work/fastrpc/thirdparty/googletest-build/googlemock/gtest/libgtest.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/lidatong/work/libpool/thirdparty/googletest-build/googlemock/gtest/libgtest_main.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/lidatong/work/fastrpc/thirdparty/googletest-build/googlemock/gtest/libgtest_main.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/include/gtest")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/lidatong/work/fastrpc/thirdparty/googletest-src/googletest/include/gtest")
 endif()
 

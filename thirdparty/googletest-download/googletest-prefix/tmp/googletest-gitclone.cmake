@@ -4,21 +4,21 @@ endif()
 
 set(run 0)
 
-if("/home/lidatong/work/libpool/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitinfo.txt" IS_NEWER_THAN "/home/lidatong/work/libpool/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitclone-lastrun.txt")
+if("/home/lidatong/work/fastrpc/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitinfo.txt" IS_NEWER_THAN "/home/lidatong/work/fastrpc/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitclone-lastrun.txt")
   set(run 1)
 endif()
 
 if(NOT run)
-  message(STATUS "Avoiding repeated git clone, stamp file is up to date: '/home/lidatong/work/libpool/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitclone-lastrun.txt'")
+  message(STATUS "Avoiding repeated git clone, stamp file is up to date: '/home/lidatong/work/fastrpc/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitclone-lastrun.txt'")
   return()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E remove_directory "/home/lidatong/work/libpool/thirdparty/googletest-src"
+  COMMAND ${CMAKE_COMMAND} -E remove_directory "/home/lidatong/work/fastrpc/thirdparty/googletest-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: '/home/lidatong/work/libpool/thirdparty/googletest-src'")
+  message(FATAL_ERROR "Failed to remove directory: '/home/lidatong/work/fastrpc/thirdparty/googletest-src'")
 endif()
 
 # try the clone 3 times incase there is an odd git clone issue
@@ -27,7 +27,7 @@ set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "/usr/bin/git" clone --origin "origin" "https://github.com/google/googletest.git" "googletest-src"
-    WORKING_DIRECTORY "/home/lidatong/work/libpool/thirdparty"
+    WORKING_DIRECTORY "/home/lidatong/work/fastrpc/thirdparty"
     RESULT_VARIABLE error_code
     )
   math(EXPR number_of_tries "${number_of_tries} + 1")
@@ -42,7 +42,7 @@ endif()
 
 execute_process(
   COMMAND "/usr/bin/git" checkout master
-  WORKING_DIRECTORY "/home/lidatong/work/libpool/thirdparty/googletest-src"
+  WORKING_DIRECTORY "/home/lidatong/work/fastrpc/thirdparty/googletest-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)
@@ -51,32 +51,32 @@ endif()
 
 execute_process(
   COMMAND "/usr/bin/git" submodule init 
-  WORKING_DIRECTORY "/home/lidatong/work/libpool/thirdparty/googletest-src"
+  WORKING_DIRECTORY "/home/lidatong/work/fastrpc/thirdparty/googletest-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to init submodules in: '/home/lidatong/work/libpool/thirdparty/googletest-src'")
+  message(FATAL_ERROR "Failed to init submodules in: '/home/lidatong/work/fastrpc/thirdparty/googletest-src'")
 endif()
 
 execute_process(
   COMMAND "/usr/bin/git" submodule update --recursive 
-  WORKING_DIRECTORY "/home/lidatong/work/libpool/thirdparty/googletest-src"
+  WORKING_DIRECTORY "/home/lidatong/work/fastrpc/thirdparty/googletest-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: '/home/lidatong/work/libpool/thirdparty/googletest-src'")
+  message(FATAL_ERROR "Failed to update submodules in: '/home/lidatong/work/fastrpc/thirdparty/googletest-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
   COMMAND ${CMAKE_COMMAND} -E copy
-    "/home/lidatong/work/libpool/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitinfo.txt"
-    "/home/lidatong/work/libpool/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitclone-lastrun.txt"
-  WORKING_DIRECTORY "/home/lidatong/work/libpool/thirdparty/googletest-src"
+    "/home/lidatong/work/fastrpc/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitinfo.txt"
+    "/home/lidatong/work/fastrpc/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitclone-lastrun.txt"
+  WORKING_DIRECTORY "/home/lidatong/work/fastrpc/thirdparty/googletest-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/home/lidatong/work/libpool/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/home/lidatong/work/fastrpc/thirdparty/googletest-download/googletest-prefix/src/googletest-stamp/googletest-gitclone-lastrun.txt'")
 endif()
 

@@ -23,7 +23,6 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
   include_directories("${gtest_SOURCE_DIR}/include")
 endif()
 
-
 # Now simply link against gtest or gtest_main as needed. Eg
 add_executable(mempool/output/gtest_test mempool/src/test.cpp mempool/unittest/gtest_test.cpp)
 target_link_libraries(mempool/output/gtest_test gtest_main gtest)
