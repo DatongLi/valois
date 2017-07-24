@@ -1,2 +1,1 @@
-# libpool
-pool library, including memory pool, thread pool etc.
+The valois, named by the French dynasties, build as a high performance network library.
