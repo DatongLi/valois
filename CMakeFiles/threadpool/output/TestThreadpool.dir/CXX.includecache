@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/lidatong/work/libpool/threadpool/example/TestThreadpool.cpp
+/Users/baidu/Desktop/workspace/valois/threadpool/example/TestThreadpool.cpp
 threadpool.h
-/home/lidatong/work/libpool/threadpool/example/threadpool.h
+/Users/baidu/Desktop/workspace/valois/threadpool/example/threadpool.h
 
 base/common.h
 iostream

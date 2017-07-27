@@ -5,7 +5,7 @@ SET(CMAKE_BINARY_DIR .)
 ADD_DEFINITIONS(-g -O0)
 add_compile_options(-std=c++11)
 
-include_directories(mempool/src threadpool/src .)
+include_directories(mempool/src threadpool/src net/src .)
 
 add_executable(mempool/output/TestMempool mempool/example/TestMempool.cpp)
 
@@ -24,6 +24,6 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 # Now simply link against gtest or gtest_main as needed. Eg
-add_executable(mempool/output/gtest_test mempool/src/test.cpp mempool/unittest/gtest_test.cpp)
-target_link_libraries(mempool/output/gtest_test gtest_main gtest)
-add_test(NAME mempool/output/gtest_test COMMAND mempool/output/gtest_test)
+add_executable(output/gtest_test test/test.cpp test/unittest/gtest_test.cpp)
+target_link_libraries(output/gtest_test gtest_main gtest)
+add_test(NAME output/gtest_test COMMAND output/gtest_test)

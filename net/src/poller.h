@@ -1,4 +1,6 @@
 
+#ifndef _POLLER_H
+#define _POLLER_H
 
 namespace base {
 namespace net {
@@ -23,3 +25,5 @@ private:
 };
 }
 }
+
+#endif

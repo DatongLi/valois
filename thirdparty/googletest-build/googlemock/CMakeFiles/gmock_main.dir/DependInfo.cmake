@@ -4,16 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lidatong/work/fastrpc/thirdparty/googletest-src/googletest/src/gtest-all.cc" "/home/lidatong/work/fastrpc/thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o"
-  "/home/lidatong/work/fastrpc/thirdparty/googletest-src/googlemock/src/gmock-all.cc" "/home/lidatong/work/fastrpc/thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o"
-  "/home/lidatong/work/fastrpc/thirdparty/googletest-src/googlemock/src/gmock_main.cc" "/home/lidatong/work/fastrpc/thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+  "/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/gtest-all.cc" "/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o"
+  "/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/gmock-all.cc" "/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o"
+  "/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/gmock_main.cc" "/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "mempool/src"
   "threadpool/src"
+  "net/src"
   "."
   "thirdparty/googletest-src/googlemock/include"
   "thirdparty/googletest-src/googlemock"

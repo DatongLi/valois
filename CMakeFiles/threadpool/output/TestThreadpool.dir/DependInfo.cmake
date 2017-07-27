@@ -4,14 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lidatong/work/fastrpc/threadpool/example/TestThreadpool.cpp" "/home/lidatong/work/fastrpc/CMakeFiles/threadpool/output/TestThreadpool.dir/threadpool/example/TestThreadpool.cpp.o"
+  "/Users/baidu/Desktop/workspace/valois/threadpool/example/TestThreadpool.cpp" "/Users/baidu/Desktop/workspace/valois/CMakeFiles/threadpool/output/TestThreadpool.dir/threadpool/example/TestThreadpool.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "mempool/src"
   "threadpool/src"
+  "net/src"
   "."
   )
 

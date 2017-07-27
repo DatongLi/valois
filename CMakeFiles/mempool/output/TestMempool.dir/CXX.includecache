@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/lidatong/work/libpool/mempool/example/TestMempool.cpp
+/Users/baidu/Desktop/workspace/valois/mempool/example/TestMempool.cpp
 mempool.h
-/home/lidatong/work/libpool/mempool/example/mempool.h
+/Users/baidu/Desktop/workspace/valois/mempool/example/mempool.h
 
 base/common.h
 iostream

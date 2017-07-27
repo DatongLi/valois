@@ -1,1 +1,1 @@
-/usr/bin/c++      CMakeFiles/threadpool/output/TestThreadpool.dir/threadpool/example/TestThreadpool.cpp.o  -o threadpool/output/TestThreadpool -rdynamic -lpthread 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/threadpool/output/TestThreadpool.dir/threadpool/example/TestThreadpool.cpp.o  -o threadpool/output/TestThreadpool -lpthread 

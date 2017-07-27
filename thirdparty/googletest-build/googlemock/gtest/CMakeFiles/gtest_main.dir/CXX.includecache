@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/src/gtest_main.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/gtest_main.cc
 stdio.h
 -
 gtest/gtest.h
-/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/src/gtest/gtest.h
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/gtest/gtest.h
 
 thirdparty/googletest-src/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
