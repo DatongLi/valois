@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,47 +6,47 @@
 
 #IncludeRegexTransform: 
 
-/home/lidatong/work/libpool/thirdparty/googletest-src/googlemock/src/gmock-all.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/gmock-all.cc
 gmock/gmock.h
-/home/lidatong/work/libpool/thirdparty/googletest-src/googlemock/src/gmock/gmock.h
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/gmock/gmock.h
 src/gmock-cardinalities.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googlemock/src/src/gmock-cardinalities.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/src/gmock-cardinalities.cc
 src/gmock-internal-utils.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googlemock/src/src/gmock-internal-utils.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/src/gmock-internal-utils.cc
 src/gmock-matchers.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googlemock/src/src/gmock-matchers.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/src/gmock-matchers.cc
 src/gmock-spec-builders.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googlemock/src/src/gmock-spec-builders.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/src/gmock-spec-builders.cc
 src/gmock.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googlemock/src/src/gmock.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/src/gmock.cc
 
-/home/lidatong/work/libpool/thirdparty/googletest-src/googlemock/src/gmock_main.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/gmock_main.cc
 iostream
 -
 gmock/gmock.h
-/home/lidatong/work/libpool/thirdparty/googletest-src/googlemock/src/gmock/gmock.h
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/gmock/gmock.h
 gtest/gtest.h
-/home/lidatong/work/libpool/thirdparty/googletest-src/googlemock/src/gtest/gtest.h
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googlemock/src/gtest/gtest.h
 tchar.h
 -
 
-/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/src/gtest-all.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/gtest-all.cc
 gtest/gtest.h
-/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/src/gtest/gtest.h
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/gtest/gtest.h
 src/gtest.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/src/src/gtest.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/src/gtest.cc
 src/gtest-death-test.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/src/src/gtest-death-test.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/src/gtest-death-test.cc
 src/gtest-filepath.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/src/src/gtest-filepath.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/src/gtest-filepath.cc
 src/gtest-port.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/src/src/gtest-port.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/src/gtest-port.cc
 src/gtest-printers.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/src/src/gtest-printers.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/src/gtest-printers.cc
 src/gtest-test-part.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/src/src/gtest-test-part.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/src/gtest-test-part.cc
 src/gtest-typed-test.cc
-/home/lidatong/work/libpool/thirdparty/googletest-src/googletest/src/src/gtest-typed-test.cc
+/Users/baidu/Desktop/workspace/valois/thirdparty/googletest-src/googletest/src/src/gtest-typed-test.cc
 
 thirdparty/googletest-src/googlemock/include/gmock/gmock-actions.h
 errno.h
