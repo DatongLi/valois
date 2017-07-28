@@ -50,8 +50,8 @@
       <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="80" lean-forward="true" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
+            <state relative-caret-position="184">
+              <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -263,7 +263,8 @@
     <MESSAGE value="delete thirdparty libs" />
     <MESSAGE value="replace the gtest by using release version" />
     <MESSAGE value="fix travis ci in linux platform doesn't install g++ and clang++ error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix travis ci in linux platform doesn't install g++ and clang++ error" />
+    <MESSAGE value="fix travis ci in linux platform  g++ and clang++ version problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix travis ci in linux platform  g++ and clang++ version problem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -481,8 +482,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="80" lean-forward="true" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
+        <state relative-caret-position="184">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
           <folding />
         </state>
       </provider>
