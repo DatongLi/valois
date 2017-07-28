@@ -205,7 +205,7 @@ gmock: cmake_check_build_system
 
 # fast build rule for target.
 gmock/fast:
-	$(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+	$(MAKE) -f thirdparty/googlemock/CMakeFiles/gmock.dir/build.make thirdparty/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 #=============================================================================
@@ -218,7 +218,7 @@ gmock_main: cmake_check_build_system
 
 # fast build rule for target.
 gmock_main/fast:
-	$(MAKE) -f thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+	$(MAKE) -f thirdparty/googlemock/CMakeFiles/gmock_main.dir/build.make thirdparty/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 #=============================================================================
@@ -231,7 +231,7 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) -f thirdparty/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make thirdparty/googlemock/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 #=============================================================================
@@ -244,7 +244,7 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) -f thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build
+	$(MAKE) -f thirdparty/googlemock/gtest/CMakeFiles/gtest.dir/build.make thirdparty/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 mempool/example/TestMempool.o: mempool/example/TestMempool.cpp.o

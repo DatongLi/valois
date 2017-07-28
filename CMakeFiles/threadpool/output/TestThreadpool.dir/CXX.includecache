@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/baidu/Desktop/workspace/valois/threadpool/example/TestThreadpool.cpp
+threadpool.h
+/Users/baidu/Desktop/workspace/valois/threadpool/example/threadpool.h
+
+base/common.h
+iostream
+-
+vector
+-
+queue
+-
+atomic
+-
+cmath
+-
+algorithm
+-
+array
+-
+mutex
+-
+condition_variable
+-
+
+base/thread_safe_queue.h
+base/common.h
+base/base/common.h
+
+threadpool/src/threadpool.h
+thread
+-
+base/common.h
+threadpool/src/base/common.h
+base/thread_safe_queue.h
+threadpool/src/base/thread_safe_queue.h
+
