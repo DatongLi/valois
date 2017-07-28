@@ -19,7 +19,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e20e0dee-9671-4e90-aa66-70dddfa7720f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -264,7 +263,8 @@
     <MESSAGE value="replace the gtest by using release version" />
     <MESSAGE value="fix travis ci in linux platform doesn't install g++ and clang++ error" />
     <MESSAGE value="fix travis ci in linux platform  g++ and clang++ version problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix travis ci in linux platform  g++ and clang++ version problem" />
+    <MESSAGE value="delete special version with clang and gcc" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete special version with clang and gcc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
