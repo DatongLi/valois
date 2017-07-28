@@ -28,8 +28,6 @@ language: cpp
 compiler:
   - gcc
   - clang
-install:
-- cmake . && make -j && make test
 addons:
   apt:
     sources:
