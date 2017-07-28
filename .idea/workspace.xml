@@ -19,32 +19,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e20e0dee-9671-4e90-aa66-70dddfa7720f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2005/gmock.sln" afterPath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2005/gmock.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2005/gmock.vcproj" afterPath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2005/gmock.vcproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2005/gmock_config.vsprops" afterPath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2005/gmock_config.vsprops" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2005/gmock_main.vcproj" afterPath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2005/gmock_main.vcproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2005/gmock_test.vcproj" afterPath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2005/gmock_test.vcproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2010/gmock.sln" afterPath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2010/gmock.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2010/gmock.vcxproj" afterPath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2010/gmock.vcxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2010/gmock_config.props" afterPath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2010/gmock_config.props" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2010/gmock_main.vcxproj" afterPath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2010/gmock_main.vcxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2010/gmock_test.vcxproj" afterPath="$PROJECT_DIR$/thirdparty/googlemock/msvc/2010/gmock_test.vcxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest.cbproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest.cbproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest.groupproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest.groupproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest_all.cc" afterPath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest_all.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest_link.cc" afterPath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest_link.cc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest_main.cbproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest_main.cbproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest_unittest.cbproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/codegear/gtest_unittest.cbproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest-md.sln" afterPath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest-md.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest-md.vcproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest-md.vcproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest.sln" afterPath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest.vcproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest.vcproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_main-md.vcproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_main-md.vcproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_main.vcproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_main.vcproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_prod_test-md.vcproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_prod_test-md.vcproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_prod_test.vcproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_prod_test.vcproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_unittest-md.vcproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_unittest-md.vcproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_unittest.vcproj" afterPath="$PROJECT_DIR$/thirdparty/googletest/msvc/gtest_unittest.vcproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -62,11 +37,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
               <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="80" lean-forward="true" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -84,15 +69,17 @@
         <option value="$PROJECT_DIR$/net/src/poller.h" />
         <option value="$PROJECT_DIR$/net/src/poller.cpp" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/thirdparty/README.md" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="x" value="1280" />
+    <option name="y" value="-280" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -118,11 +105,6 @@
             <path>
               <item name="valois" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="valois" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="valois" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="valois" type="462c0819:PsiDirectoryNode" />
-              <item name="thirdparty" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="valois" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
@@ -220,14 +202,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="1280" y="-280" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23021002" sideWeight="0.4939577" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1517572" sideWeight="0.4939577" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18892045" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33028457" sideWeight="0.5021299" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328125" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2347561" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670453" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24920128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17625134" sideWeight="0.5060423" order="2" side_tool="true" content_ui="tabs" />
@@ -279,7 +262,8 @@
     <MESSAGE value="update travis-ci file and update all gtest files" />
     <MESSAGE value="delete thirdparty libs" />
     <MESSAGE value="replace the gtest by using release version" />
-    <option name="LAST_COMMIT_MESSAGE" value="replace the gtest by using release version" />
+    <MESSAGE value="fix travis ci in linux platform doesn't install g++ and clang++ error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix travis ci in linux platform doesn't install g++ and clang++ error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -431,13 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configure">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -498,6 +475,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="80" lean-forward="true" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
           <folding />
         </state>
       </provider>
