@@ -1,4 +1,4 @@
-# Install script for directory: /home/lidatong/work/valois/thirdparty
+# Install script for directory: /home/lidatong/work/valois/mempool
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -30,12 +30,5 @@ endif()
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/lidatong/work/valois/thirdparty/googlemock/cmake_install.cmake")
-  include("/home/lidatong/work/valois/thirdparty/gflags/cmake_install.cmake")
-
 endif()
 

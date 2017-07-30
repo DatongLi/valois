@@ -1,4 +1,7 @@
 #include "mempool.h"
+#include <gflags/gflags.h>
+
+DEFINE_int32(elem_num, 10, "pool elem number");
 
 class Node {
 public:
@@ -16,8 +19,11 @@ private:
     int _cnt;
 };
 
-int main() {
-    base::Mempool<Node> mpool(10);
+int main(int argc, char* argv[]) {
+    gflags::SetUsageMessage("some usage message");
+    gflags::SetVersionString("1.0.0");
+    gflags::ParseCommandLineFlags(&argc, &argv, true);
+    base::Mempool<Node> mpool(FLAGS_elem_num);
     Node *node;
     mpool.getElem(node);
     node->SetCnt(3);

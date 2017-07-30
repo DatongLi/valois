@@ -78,6 +78,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -111,27 +122,16 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/lidatong/work/valois && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/valois/CMakeFiles /home/lidatong/work/valois/thirdparty/CMakeFiles/progress.marks
-	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/all
+	cd /home/lidatong/work/valois && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/valois/CMakeFiles /home/lidatong/work/valois/threadpool/CMakeFiles/progress.marks
+	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 threadpool/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/valois/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/clean
+	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 threadpool/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,18 +141,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/preinstall
+	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 threadpool/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/preinstall
+	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 threadpool/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
 	cd /home/lidatong/work/valois && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+threadpool/CMakeFiles/output/TestThreadpool.dir/rule:
+	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 threadpool/CMakeFiles/output/TestThreadpool.dir/rule
+.PHONY : threadpool/CMakeFiles/output/TestThreadpool.dir/rule
+
+# Convenience name for target.
+output/TestThreadpool: threadpool/CMakeFiles/output/TestThreadpool.dir/rule
+
+.PHONY : output/TestThreadpool
+
+# fast build rule for target.
+output/TestThreadpool/fast:
+	cd /home/lidatong/work/valois && $(MAKE) -f threadpool/CMakeFiles/output/TestThreadpool.dir/build.make threadpool/CMakeFiles/output/TestThreadpool.dir/build
+.PHONY : output/TestThreadpool/fast
+
+example/TestThreadpool.o: example/TestThreadpool.cpp.o
+
+.PHONY : example/TestThreadpool.o
+
+# target to build an object file
+example/TestThreadpool.cpp.o:
+	cd /home/lidatong/work/valois && $(MAKE) -f threadpool/CMakeFiles/output/TestThreadpool.dir/build.make threadpool/CMakeFiles/output/TestThreadpool.dir/example/TestThreadpool.cpp.o
+.PHONY : example/TestThreadpool.cpp.o
+
+example/TestThreadpool.i: example/TestThreadpool.cpp.i
+
+.PHONY : example/TestThreadpool.i
+
+# target to preprocess a source file
+example/TestThreadpool.cpp.i:
+	cd /home/lidatong/work/valois && $(MAKE) -f threadpool/CMakeFiles/output/TestThreadpool.dir/build.make threadpool/CMakeFiles/output/TestThreadpool.dir/example/TestThreadpool.cpp.i
+.PHONY : example/TestThreadpool.cpp.i
+
+example/TestThreadpool.s: example/TestThreadpool.cpp.s
+
+.PHONY : example/TestThreadpool.s
+
+# target to generate assembly for a file
+example/TestThreadpool.cpp.s:
+	cd /home/lidatong/work/valois && $(MAKE) -f threadpool/CMakeFiles/output/TestThreadpool.dir/build.make threadpool/CMakeFiles/output/TestThreadpool.dir/example/TestThreadpool.cpp.s
+.PHONY : example/TestThreadpool.cpp.s
 
 # Help Target
 help:
@@ -162,10 +204,14 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... output/TestThreadpool"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
+	@echo "... example/TestThreadpool.o"
+	@echo "... example/TestThreadpool.i"
+	@echo "... example/TestThreadpool.s"
 .PHONY : help
 
 

@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/src/gtest-all.cc" "/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o"
-  "/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/src/gmock-all.cc" "/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+  "/home/lidatong/work/valois/thirdparty/googletest/src/gtest-all.cc" "/home/lidatong/work/valois/thirdparty/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o"
+  "/home/lidatong/work/valois/thirdparty/googlemock/src/gmock-all.cc" "/home/lidatong/work/valois/thirdparty/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
   )
-set(CMAKE_CXX_COMPILER_ID "Clang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
