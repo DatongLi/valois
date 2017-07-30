@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget gflags_static gflags_nothreads_static)
+foreach(_expectedTarget gflags_nothreads_static)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -38,35 +38,20 @@ unset(_targetsNotDefined)
 unset(_expectedTargets)
 
 
-# Create imported target gflags_static
-add_library(gflags_static STATIC IMPORTED)
-
-set_target_properties(gflags_static PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "GFLAGS_IS_A_DLL=0"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/lidatong/work/valois/thirdparty/gflags/include"
-  INTERFACE_LINK_LIBRARIES "-lpthread"
-)
-
 # Create imported target gflags_nothreads_static
 add_library(gflags_nothreads_static STATIC IMPORTED)
 
 set_target_properties(gflags_nothreads_static PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "GFLAGS_IS_A_DLL=0"
   INTERFACE_INCLUDE_DIRECTORIES "/home/lidatong/work/valois/thirdparty/gflags/include"
+  INTERFACE_LINK_LIBRARIES "pthread"
 )
 
-# Import target "gflags_static" for configuration "Release"
-set_property(TARGET gflags_static APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(gflags_static PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/home/lidatong/work/valois/thirdparty/gflags/lib/libgflags.a"
-  )
-
-# Import target "gflags_nothreads_static" for configuration "Release"
-set_property(TARGET gflags_nothreads_static APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+# Import target "gflags_nothreads_static" for configuration ""
+set_property(TARGET gflags_nothreads_static APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(gflags_nothreads_static PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/home/lidatong/work/valois/thirdparty/gflags/lib/libgflags_nothreads.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
+  IMPORTED_LOCATION_NOCONFIG "/home/lidatong/work/valois/thirdparty/gflags/libgflags_nothreads.a"
   )
 
 # This file does not depend on other imported targets which have

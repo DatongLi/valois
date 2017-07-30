@@ -48,46 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidatong/work/valois/thirdparty/gflags
+CMAKE_SOURCE_DIR = /home/lidatong/work/valois
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidatong/work/valois/thirdparty/gflags
+CMAKE_BINARY_DIR = /home/lidatong/work/valois
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -111,16 +78,49 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/valois/thirdparty/gflags/CMakeFiles /home/lidatong/work/valois/thirdparty/gflags/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/valois/thirdparty/gflags/CMakeFiles 0
+	cd /home/lidatong/work/valois && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/valois/CMakeFiles /home/lidatong/work/valois/thirdparty/gflags/CMakeFiles/progress.marks
+	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/gflags/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/valois/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/gflags/clean
 .PHONY : clean
 
 # The main clean target
@@ -130,69 +130,32 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/gflags/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/gflags/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lidatong/work/valois && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named gflags_static
+# Convenience name for target.
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/rule:
+	cd /home/lidatong/work/valois && $(MAKE) -f CMakeFiles/Makefile2 thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/rule
+.PHONY : thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/rule
 
-# Build rule for target.
-gflags_static: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gflags_static
-.PHONY : gflags_static
+# Convenience name for target.
+gflags_nothreads_static: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/rule
 
-# fast build rule for target.
-gflags_static/fast:
-	$(MAKE) -f CMakeFiles/gflags_static.dir/build.make CMakeFiles/gflags_static.dir/build
-.PHONY : gflags_static/fast
-
-#=============================================================================
-# Target rules for targets named gflags_nothreads
-
-# Build rule for target.
-gflags_nothreads: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gflags_nothreads
-.PHONY : gflags_nothreads
-
-# fast build rule for target.
-gflags_nothreads/fast:
-	$(MAKE) -f CMakeFiles/gflags_nothreads.dir/build.make CMakeFiles/gflags_nothreads.dir/build
-.PHONY : gflags_nothreads/fast
-
-#=============================================================================
-# Target rules for targets named gflags
-
-# Build rule for target.
-gflags: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gflags
-.PHONY : gflags
-
-# fast build rule for target.
-gflags/fast:
-	$(MAKE) -f CMakeFiles/gflags.dir/build.make CMakeFiles/gflags.dir/build
-.PHONY : gflags/fast
-
-#=============================================================================
-# Target rules for targets named gflags_nothreads_static
-
-# Build rule for target.
-gflags_nothreads_static: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gflags_nothreads_static
 .PHONY : gflags_nothreads_static
 
 # fast build rule for target.
 gflags_nothreads_static/fast:
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/build
+	cd /home/lidatong/work/valois && $(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build
 .PHONY : gflags_nothreads_static/fast
 
 src/gflags.o: src/gflags.cc.o
@@ -201,8 +164,7 @@ src/gflags.o: src/gflags.cc.o
 
 # target to build an object file
 src/gflags.cc.o:
-	$(MAKE) -f CMakeFiles/gflags_static.dir/build.make CMakeFiles/gflags_static.dir/src/gflags.cc.o
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o
+	cd /home/lidatong/work/valois && $(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o
 .PHONY : src/gflags.cc.o
 
 src/gflags.i: src/gflags.cc.i
@@ -211,8 +173,7 @@ src/gflags.i: src/gflags.cc.i
 
 # target to preprocess a source file
 src/gflags.cc.i:
-	$(MAKE) -f CMakeFiles/gflags_static.dir/build.make CMakeFiles/gflags_static.dir/src/gflags.cc.i
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.i
+	cd /home/lidatong/work/valois && $(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.i
 .PHONY : src/gflags.cc.i
 
 src/gflags.s: src/gflags.cc.s
@@ -221,8 +182,7 @@ src/gflags.s: src/gflags.cc.s
 
 # target to generate assembly for a file
 src/gflags.cc.s:
-	$(MAKE) -f CMakeFiles/gflags_static.dir/build.make CMakeFiles/gflags_static.dir/src/gflags.cc.s
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.s
+	cd /home/lidatong/work/valois && $(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.s
 .PHONY : src/gflags.cc.s
 
 src/gflags_completions.o: src/gflags_completions.cc.o
@@ -231,8 +191,7 @@ src/gflags_completions.o: src/gflags_completions.cc.o
 
 # target to build an object file
 src/gflags_completions.cc.o:
-	$(MAKE) -f CMakeFiles/gflags_static.dir/build.make CMakeFiles/gflags_static.dir/src/gflags_completions.cc.o
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o
+	cd /home/lidatong/work/valois && $(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o
 .PHONY : src/gflags_completions.cc.o
 
 src/gflags_completions.i: src/gflags_completions.cc.i
@@ -241,8 +200,7 @@ src/gflags_completions.i: src/gflags_completions.cc.i
 
 # target to preprocess a source file
 src/gflags_completions.cc.i:
-	$(MAKE) -f CMakeFiles/gflags_static.dir/build.make CMakeFiles/gflags_static.dir/src/gflags_completions.cc.i
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.i
+	cd /home/lidatong/work/valois && $(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.i
 .PHONY : src/gflags_completions.cc.i
 
 src/gflags_completions.s: src/gflags_completions.cc.s
@@ -251,8 +209,7 @@ src/gflags_completions.s: src/gflags_completions.cc.s
 
 # target to generate assembly for a file
 src/gflags_completions.cc.s:
-	$(MAKE) -f CMakeFiles/gflags_static.dir/build.make CMakeFiles/gflags_static.dir/src/gflags_completions.cc.s
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.s
+	cd /home/lidatong/work/valois && $(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.s
 .PHONY : src/gflags_completions.cc.s
 
 src/gflags_reporting.o: src/gflags_reporting.cc.o
@@ -261,8 +218,7 @@ src/gflags_reporting.o: src/gflags_reporting.cc.o
 
 # target to build an object file
 src/gflags_reporting.cc.o:
-	$(MAKE) -f CMakeFiles/gflags_static.dir/build.make CMakeFiles/gflags_static.dir/src/gflags_reporting.cc.o
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o
+	cd /home/lidatong/work/valois && $(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o
 .PHONY : src/gflags_reporting.cc.o
 
 src/gflags_reporting.i: src/gflags_reporting.cc.i
@@ -271,8 +227,7 @@ src/gflags_reporting.i: src/gflags_reporting.cc.i
 
 # target to preprocess a source file
 src/gflags_reporting.cc.i:
-	$(MAKE) -f CMakeFiles/gflags_static.dir/build.make CMakeFiles/gflags_static.dir/src/gflags_reporting.cc.i
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.i
+	cd /home/lidatong/work/valois && $(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.i
 .PHONY : src/gflags_reporting.cc.i
 
 src/gflags_reporting.s: src/gflags_reporting.cc.s
@@ -281,8 +236,7 @@ src/gflags_reporting.s: src/gflags_reporting.cc.s
 
 # target to generate assembly for a file
 src/gflags_reporting.cc.s:
-	$(MAKE) -f CMakeFiles/gflags_static.dir/build.make CMakeFiles/gflags_static.dir/src/gflags_reporting.cc.s
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.s
+	cd /home/lidatong/work/valois && $(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.s
 .PHONY : src/gflags_reporting.cc.s
 
 # Help Target
@@ -291,15 +245,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... install/local"
-	@echo "... gflags_static"
-	@echo "... gflags_nothreads"
 	@echo "... list_install_components"
-	@echo "... gflags"
 	@echo "... install"
 	@echo "... gflags_nothreads_static"
+	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... src/gflags.o"
 	@echo "... src/gflags.i"
 	@echo "... src/gflags.s"
@@ -320,6 +271,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lidatong/work/valois && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

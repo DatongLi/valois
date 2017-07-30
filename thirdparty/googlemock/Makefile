@@ -111,17 +111,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/lidatong/work/valois && $(CMAKE_COMMAND) -E cmake_progress_start /home/lidatong/work/valois/CMakeFiles /home/lidatong/work/valois/thirdparty/googlemock/CMakeFiles/progress.marks
@@ -284,7 +273,6 @@ help:
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... edit_cache"
-	@echo "... install/strip"
 	@echo "... __/googletest/src/gtest-all.o"
 	@echo "... __/googletest/src/gtest-all.i"
 	@echo "... __/googletest/src/gtest-all.s"

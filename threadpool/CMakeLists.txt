@@ -1,1 +1,2 @@
+include_directories(src)
 add_executable(output/TestThreadpool example/TestThreadpool.cpp)

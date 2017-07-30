@@ -43,90 +43,90 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lidatong/work/valois/thirdparty/gflags
+CMAKE_SOURCE_DIR = /home/lidatong/work/valois
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lidatong/work/valois/thirdparty/gflags
+CMAKE_BINARY_DIR = /home/lidatong/work/valois
 
 # Include any dependencies generated for this target.
-include CMakeFiles/gflags_nothreads_static.dir/depend.make
+include thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/gflags_nothreads_static.dir/progress.make
+include thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/gflags_nothreads_static.dir/flags.make
+include thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/flags.make
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o: CMakeFiles/gflags_nothreads_static.dir/flags.make
-CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o: src/gflags.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/valois/thirdparty/gflags/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o -c /home/lidatong/work/valois/thirdparty/gflags/src/gflags.cc
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/flags.make
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o: thirdparty/gflags/src/gflags.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/valois/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o"
+	cd /home/lidatong/work/valois/thirdparty/gflags && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o -c /home/lidatong/work/valois/thirdparty/gflags/src/gflags.cc
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.i: cmake_force
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/valois/thirdparty/gflags/src/gflags.cc > CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.i
+	cd /home/lidatong/work/valois/thirdparty/gflags && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/valois/thirdparty/gflags/src/gflags.cc > CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.i
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.s: cmake_force
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/valois/thirdparty/gflags/src/gflags.cc -o CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.s
+	cd /home/lidatong/work/valois/thirdparty/gflags && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/valois/thirdparty/gflags/src/gflags.cc -o CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.s
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.requires:
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.requires:
 
-.PHONY : CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.requires
+.PHONY : thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.requires
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.provides: CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.requires
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.provides.build
-.PHONY : CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.provides
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.provides: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.requires
+	$(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.provides.build
+.PHONY : thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.provides
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.provides.build: CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.provides.build: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o
 
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o: CMakeFiles/gflags_nothreads_static.dir/flags.make
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o: src/gflags_reporting.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/valois/thirdparty/gflags/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o -c /home/lidatong/work/valois/thirdparty/gflags/src/gflags_reporting.cc
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/flags.make
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o: thirdparty/gflags/src/gflags_reporting.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/valois/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o"
+	cd /home/lidatong/work/valois/thirdparty/gflags && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o -c /home/lidatong/work/valois/thirdparty/gflags/src/gflags_reporting.cc
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.i: cmake_force
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/valois/thirdparty/gflags/src/gflags_reporting.cc > CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.i
+	cd /home/lidatong/work/valois/thirdparty/gflags && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/valois/thirdparty/gflags/src/gflags_reporting.cc > CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.i
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.s: cmake_force
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/valois/thirdparty/gflags/src/gflags_reporting.cc -o CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.s
+	cd /home/lidatong/work/valois/thirdparty/gflags && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/valois/thirdparty/gflags/src/gflags_reporting.cc -o CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.s
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.requires:
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.requires:
 
-.PHONY : CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.requires
+.PHONY : thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.requires
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.provides: CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.requires
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.provides.build
-.PHONY : CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.provides
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.provides: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.requires
+	$(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.provides.build
+.PHONY : thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.provides
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.provides.build: CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.provides.build: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o
 
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o: CMakeFiles/gflags_nothreads_static.dir/flags.make
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o: src/gflags_completions.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/valois/thirdparty/gflags/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o -c /home/lidatong/work/valois/thirdparty/gflags/src/gflags_completions.cc
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/flags.make
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o: thirdparty/gflags/src/gflags_completions.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lidatong/work/valois/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o"
+	cd /home/lidatong/work/valois/thirdparty/gflags && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o -c /home/lidatong/work/valois/thirdparty/gflags/src/gflags_completions.cc
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.i: cmake_force
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/valois/thirdparty/gflags/src/gflags_completions.cc > CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.i
+	cd /home/lidatong/work/valois/thirdparty/gflags && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lidatong/work/valois/thirdparty/gflags/src/gflags_completions.cc > CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.i
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.s: cmake_force
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/valois/thirdparty/gflags/src/gflags_completions.cc -o CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.s
+	cd /home/lidatong/work/valois/thirdparty/gflags && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lidatong/work/valois/thirdparty/gflags/src/gflags_completions.cc -o CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.s
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.requires:
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.requires:
 
-.PHONY : CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.requires
+.PHONY : thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.requires
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.provides: CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.requires
-	$(MAKE) -f CMakeFiles/gflags_nothreads_static.dir/build.make CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.provides.build
-.PHONY : CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.provides
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.provides: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.requires
+	$(MAKE) -f thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.provides.build
+.PHONY : thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.provides
 
-CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.provides.build: CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.provides.build: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o
 
 
 # Object files for target gflags_nothreads_static
@@ -138,31 +138,31 @@ gflags_nothreads_static_OBJECTS = \
 # External object files for target gflags_nothreads_static
 gflags_nothreads_static_EXTERNAL_OBJECTS =
 
-lib/libgflags_nothreads.a: CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o
-lib/libgflags_nothreads.a: CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o
-lib/libgflags_nothreads.a: CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o
-lib/libgflags_nothreads.a: CMakeFiles/gflags_nothreads_static.dir/build.make
-lib/libgflags_nothreads.a: CMakeFiles/gflags_nothreads_static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidatong/work/valois/thirdparty/gflags/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library lib/libgflags_nothreads.a"
-	$(CMAKE_COMMAND) -P CMakeFiles/gflags_nothreads_static.dir/cmake_clean_target.cmake
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gflags_nothreads_static.dir/link.txt --verbose=$(VERBOSE)
+thirdparty/gflags/libgflags_nothreads.a: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o
+thirdparty/gflags/libgflags_nothreads.a: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o
+thirdparty/gflags/libgflags_nothreads.a: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o
+thirdparty/gflags/libgflags_nothreads.a: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build.make
+thirdparty/gflags/libgflags_nothreads.a: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lidatong/work/valois/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libgflags_nothreads.a"
+	cd /home/lidatong/work/valois/thirdparty/gflags && $(CMAKE_COMMAND) -P CMakeFiles/gflags_nothreads_static.dir/cmake_clean_target.cmake
+	cd /home/lidatong/work/valois/thirdparty/gflags && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gflags_nothreads_static.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/gflags_nothreads_static.dir/build: lib/libgflags_nothreads.a
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build: thirdparty/gflags/libgflags_nothreads.a
 
-.PHONY : CMakeFiles/gflags_nothreads_static.dir/build
+.PHONY : thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/build
 
-CMakeFiles/gflags_nothreads_static.dir/requires: CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.requires
-CMakeFiles/gflags_nothreads_static.dir/requires: CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.requires
-CMakeFiles/gflags_nothreads_static.dir/requires: CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.requires
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/requires: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o.requires
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/requires: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o.requires
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/requires: thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o.requires
 
-.PHONY : CMakeFiles/gflags_nothreads_static.dir/requires
+.PHONY : thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/requires
 
-CMakeFiles/gflags_nothreads_static.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/gflags_nothreads_static.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/gflags_nothreads_static.dir/clean
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/clean:
+	cd /home/lidatong/work/valois/thirdparty/gflags && $(CMAKE_COMMAND) -P CMakeFiles/gflags_nothreads_static.dir/cmake_clean.cmake
+.PHONY : thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/clean
 
-CMakeFiles/gflags_nothreads_static.dir/depend:
-	cd /home/lidatong/work/valois/thirdparty/gflags && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidatong/work/valois/thirdparty/gflags /home/lidatong/work/valois/thirdparty/gflags /home/lidatong/work/valois/thirdparty/gflags /home/lidatong/work/valois/thirdparty/gflags /home/lidatong/work/valois/thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/gflags_nothreads_static.dir/depend
+thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/depend:
+	cd /home/lidatong/work/valois && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lidatong/work/valois /home/lidatong/work/valois/thirdparty/gflags /home/lidatong/work/valois /home/lidatong/work/valois/thirdparty/gflags /home/lidatong/work/valois/thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : thirdparty/gflags/CMakeFiles/gflags_nothreads_static.dir/depend
 

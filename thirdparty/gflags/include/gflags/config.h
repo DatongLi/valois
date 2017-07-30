@@ -40,10 +40,10 @@
 /* #undef HAVE_STRTOQ */
 
 // Define if you have the <pthread.h> header file.
-#define HAVE_PTHREAD
+/* #undef HAVE_PTHREAD */
 
 // Define if your pthread library defines the type pthread_rwlock_t
-#define HAVE_RWLOCK
+/* #undef HAVE_RWLOCK */
 
 // gcc requires this to get PRId64, etc.
 #if defined(HAVE_INTTYPES_H) && !defined(__STDC_FORMAT_MACROS)
