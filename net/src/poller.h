@@ -1,6 +1,11 @@
+#include <pthread.h>
 
 #ifndef _POLLER_H
 #define _POLLER_H
+
+#if defined(__cplusplus)
+extern "C"
+#endif
 
 namespace base {
 namespace net {
@@ -17,11 +22,31 @@ class Poller {
 public:
 
     Poller();
-    void run();
+    virtual ~Poller();
+
+    bool Start();
+    bool Stop();
+    void* Run();
+
+    Poller(const Poller& ) = delete;
+    Poller &operator = (const Poller &) = delete;
+    Poller(Poller &&) = delete;
+    Poller &operator = (const Poller &&) = delete;
+
+    int AddEpollOut(uint32_t socket_id, int fd, bool pollin = true);
+    int AddFDToEpoll(int fd, uint32_t ep_events);
+
+    int RemoveFDFromEpoll(int fd);
 
 private:
+    int AddFDToEpoll(int fd, uint64_t ep_data, uint32_t ep_events);
 
+    volatile bool _stop;
+    int _epfd;
+    pthread_t _tid;
 
+    // wakeup the epoll from epoll_wait when call Stop()
+    int _wakeup_fds[2];
 };
 }
 }
