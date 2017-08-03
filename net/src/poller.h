@@ -1,4 +1,6 @@
 #include <pthread.h>
+#include <sys/epoll.h>
+#include "base/common.h"
 
 #ifndef _POLLER_H
 #define _POLLER_H
@@ -38,6 +40,7 @@ public:
 
     int RemoveFDFromEpoll(int fd);
 
+    int add(int a, int b);
 private:
     int AddFDToEpoll(int fd, uint64_t ep_data, uint32_t ep_events);
 

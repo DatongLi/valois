@@ -107,5 +107,8 @@ namespace net {
         return 0;
     }
 
+    int Poller::add(int a, int b) {
+        return a+b;
+    }
 }
 }

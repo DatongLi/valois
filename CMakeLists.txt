@@ -7,6 +7,7 @@ include_directories(.)
 add_subdirectory(${CMAKE_BINARY_DIR}/thirdparty)
 add_subdirectory(mempool)
 add_subdirectory(threadpool)
+add_subdirectory(net)
 
 add_executable(output/test/gtest_test test/test.cpp test/unittest/gtest_test.cpp)
 target_link_libraries(output/test/gtest_test gtest_main gtest)
