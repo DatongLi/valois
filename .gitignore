@@ -1,0 +1,10 @@
+CMakeFiles
+cmake-build-debug
+.vscode
+thirdparty
+CMakeCache.txt
+net/Makefile
+net/cmake_install.cmake
+net/example/
+net/output/
+thirdparty/gflags/gflags.cbp

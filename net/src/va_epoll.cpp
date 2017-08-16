@@ -34,11 +34,33 @@ bool Poller::Stop(const int &wakeup_fd) {
 }
 
 int Poll::PollAddEvent(EventLoop *eventLoop, int fd, int mask) {
-
+    struct epoll_event ee = {0};  /* avoid valgrind warning */
+    int op = eventLoop->events[fd].mask == VA_NONE ?
+             EPOLL_CTL_ADD : EPOLL_CTL_MOD;
+    ee.events = 0;
+    mask |= eventLoop->events[fd].mask;
+    if (mask & VA_READABLE) ee.events |= EPOLLIN;
+    if (mask & VA_WRITABLE) ee.events |= EPOLLOUT;
+    ee.data.fd = fd;
+    if (epoll_ctl(_epfd,op,fd,&ee) == -1) return -1;
+    return 0;
 }
 
 int Poll::PollDelEvent(EventLoop *eventLoop, int fd, int mask) {
-
+    struct epoll_event ee = {0};  /* avoid valgrind warning */
+    int mask = eventLoop->events[fd].mask & (~delmask);
+    ee.events = 0;
+    if (mask & VA_READABLE) ee.events |= EPOLLIN;
+    if (mask & VA_WRITABLE) ee.events |= EPOLLOUT;
+    ee.data.fd = fd;
+    if (mask != VA_NONE) {
+        epoll_ctl(_epfd, EPOLL_CTL_MOD, fd, &ee);
+    } else {
+        /* Note, Kernel < 2.6.9 requires a non null event pointer even for
+         * EPOLL_CTL_DEL. */
+        epoll_ctl(_epfd, EPOLL_CTL_DEL, fd, &ee);
+    }
+    return 0;
 }
 
 int Poll::PollWaitEvent(EventLoop *eventLoop, struct timeval *tvp) {

@@ -56,7 +56,7 @@ bool EventLoop::Stop() {
     return true;
 }
 
-void* EventLoop::Run(void* ) {
+void* EventLoop::Run(void* args) {
     while(!_stop.load(std::memory_order_acquire)) {
         const int n = epoll_wait(_epfd, e, ARRAY_SIZE(e), -1);
         if(_stop.load(std::memory_order_acquire)) { break; }

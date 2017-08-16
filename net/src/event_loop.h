@@ -26,7 +26,7 @@ public:
 
     bool Start();
     bool Stop();
-    void* Run();
+    void* Run(void* args);
 
 private:
     Poll poll;
