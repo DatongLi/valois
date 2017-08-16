@@ -5,7 +5,7 @@
 #include "va_epoll.h"
 
 int Poll::PollCreate(EventLoop *eventLoop) {
-    _epfd = epoll_create(1024 * 1024);
+    _epfd = epoll_create(1024);
     if (_epfd < 0) {
         return -1;
     }
@@ -39,4 +39,25 @@ int Poll::PollAddEvent(EventLoop *eventLoop, int fd, int mask) {
 
 int Poll::PollDelEvent(EventLoop *eventLoop, int fd, int mask) {
 
+}
+
+int Poll::PollWaitEvent(EventLoop *eventLoop, struct timeval *tvp) {
+    int nReady = 0;
+    int ret = epoll_wait(_epfd, _events, eventLoop->GetEventSize(),
+                         tvp ? (tvp->tv_sec*1000 + tvp->tv_usec/1000) : -1);
+    if(ret > 0) {
+        nReady = ret;
+        for (int j = 0; j < numevents; j++) {
+            int mask = 0;
+            struct epoll_event *e = _events + j;
+
+            if (e->events & EPOLLIN) mask |= VA_READABLE;
+            if (e->events & EPOLLOUT) mask |= VA_WRITABLE;
+            if (e->events & EPOLLERR) mask |= VA_WRITABLE;
+            if (e->events & EPOLLHUP) mask |= VA_WRITABLE;
+            eventLoop->fired[j].fd = e->data.fd;
+            eventLoop->fired[j].mask = mask;
+        }
+    }
+    return nReady;
 }

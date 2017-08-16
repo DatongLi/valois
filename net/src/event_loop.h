@@ -12,6 +12,10 @@
     #endif
 #endif
 
+#define VA_NONE 0
+#define VA_READABLE 1
+#define VA_WRITABLE 2
+
 class EventLoop {
 public:
     EventLoop();
@@ -29,6 +33,15 @@ private:
     int _eventSize;
     std::atomic<bool> _stop;
     pthread_t _tid;
+
+    /* A fired event */
+    typedef struct vaEvent {
+        int fd;
+        int mask;
+    } vaEvent;
+
+    vaEvent *events;
+    vaEvent *fired;
 
     // wakeup the epoll from epoll_wait when call Stop()
     int _wakeup_fds[2];

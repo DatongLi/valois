@@ -4,6 +4,8 @@
 EventLoop::EventLoop()
         : _eventSize(0)
         , _stop(true)
+        , events(NULL)
+        , fired(NULL)
 {
     _wakeup_fds[0] = -1;
     _wakeup_fds[1] = -1;
