@@ -1,19 +1,24 @@
 .vscode
 .idea
 
+.DS_Store
 output
 Makefile
 CMakeCache.txt
 cmake_install.cmake
 cmake-build-debug
+CMakeFiles/
 
+net/example/
 net/output
+net/.DS_Store
 net/Makefile
 net/CMakeFiles
 net/cmake_install.cmake
 net/CMakeCache.txt
 
 thirdparty
+thirdparty/.DS_Store
 thirdparty/CMakeFiles
 thirdparty/Makefile
 thirdparty/CMakeCache.txt
@@ -35,11 +40,14 @@ thirdparty/gflags/CMakeCache.txt
 thirdparty/gflags/cmake_install.cmake
 
 mempool/output
+mempool/.DS_Store
 mempool/Makefile
 mempool/CMakeFiles
 mempool/cmake_install.cmake
 
 threadpool/output
+threadpool/.DS_Store
 threadpool/Makefile
 threadpool/CMakeFiles
 threadpool/cmake_install.cmake
+
