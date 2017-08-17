@@ -4,11 +4,23 @@ link_libraries(pthread)
 
 include_directories(.)
 
-add_subdirectory(${CMAKE_BINARY_DIR}/thirdparty)
+add_subdirectory(thirdparty)
 add_subdirectory(mempool)
 add_subdirectory(threadpool)
 add_subdirectory(net)
 
-add_executable(output/test/gtest_test test/test.cpp test/unittest/gtest_test.cpp)
-target_link_libraries(output/test/gtest_test gtest_main gtest)
-add_test(NAME output/test/gtest_test COMMAND output/test/gtest_test)
+set(dir output)
+file(MAKE_DIRECTORY ${dir})
+file(MAKE_DIRECTORY ${dir}/test)
+
+set(EXECUTABLE_OUTPUT_PATH ${dir} CACHE PATH "Build directory" FORCE)
+set(LIBRARY_OUTPUT_PATH ${dir} CACHE PATH "Build directory" FORCE)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${dir})
+set(CMAKE_BUILD_FILES_DIRECTORY ${dir})
+set(CMAKE_BUILD_DIRECTORY ${dir})
+set(CMAKE_BINARY_DIR  ${dir})
+SET(CMAKE_CACHEFILE_DIR ${dir})
+
+add_executable(test/gtest_test test/test.cpp test/unittest/gtest_test.cpp)
+target_link_libraries(test/gtest_test gtest_main gtest)
+add_test(NAME test/gtest_test COMMAND test/gtest_test)

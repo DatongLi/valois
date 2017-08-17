@@ -1,2 +1,5 @@
 include_directories(src)
-add_executable(output/TestThreadpool example/TestThreadpool.cpp)
+set(dir output)
+file(MAKE_DIRECTORY ${dir})
+file(MAKE_DIRECTORY ${dir}/test)
+add_executable(test/TestThreadpool example/TestThreadpool.cpp)

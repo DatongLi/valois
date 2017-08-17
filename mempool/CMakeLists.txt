@@ -1,3 +1,6 @@
 include_directories(src)
-add_executable(output/TestMempool example/TestMempool.cpp)
-target_link_libraries(output/TestMempool gflags)
+set(dir output)
+file(MAKE_DIRECTORY ${dir})
+file(MAKE_DIRECTORY ${dir}/test)
+add_executable(test/TestMempool example/TestMempool.cpp)
+target_link_libraries(test/TestMempool gflags)
