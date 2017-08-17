@@ -14,6 +14,7 @@ public:
     virtual void PollFree(EventLoop *eventLoop) = 0;
     virtual int PollAddEvent(EventLoop *eventLoop, int fd, int mask) = 0;
     virtual int PollDelEvent(EventLoop *eventLoop, int fd, int mask) = 0;
+    virtual int PollWaitEvent(EventLoop *eventLoop, struct timeval *tvp) = 0;
 };
 
 

@@ -20,6 +20,7 @@ public:
 private:
     int _epfd;
     struct epoll_event *_events;
+    int _events_num;
 };
 
 #endif //_VA_EPOLL_H

@@ -1,6 +1,7 @@
 CMakeFiles
 cmake-build-debug
 .vscode
+.idea
 thirdparty
 CMakeCache.txt
 net/Makefile

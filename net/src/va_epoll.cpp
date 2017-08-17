@@ -9,9 +9,11 @@ int Poll::PollCreate(EventLoop *eventLoop) {
     if (_epfd < 0) {
         return -1;
     }
-    _events = malloc(sizeof(struct epoll_event) * eventLoop->GetEventSize());
+    _events_num = eventLoop->GetEventSize();
+    _events = malloc(sizeof(struct epoll_event) * _events_num);
     if (nullptr == _events) {
         close(_epfd);
+        _events_num = 0;
         return -1;
     }
     return 0;
@@ -34,7 +36,7 @@ bool Poller::Stop(const int &wakeup_fd) {
 }
 
 int Poll::PollAddEvent(EventLoop *eventLoop, int fd, int mask) {
-    struct epoll_event ee = {0};  /* avoid valgrind warning */
+    struct epoll_event ee = {0};
     int op = eventLoop->events[fd].mask == VA_NONE ?
              EPOLL_CTL_ADD : EPOLL_CTL_MOD;
     ee.events = 0;
@@ -42,12 +44,12 @@ int Poll::PollAddEvent(EventLoop *eventLoop, int fd, int mask) {
     if (mask & VA_READABLE) ee.events |= EPOLLIN;
     if (mask & VA_WRITABLE) ee.events |= EPOLLOUT;
     ee.data.fd = fd;
-    if (epoll_ctl(_epfd,op,fd,&ee) == -1) return -1;
+    if (epoll_ctl(_epfd, op, fd, &ee) == -1) return -1;
     return 0;
 }
 
 int Poll::PollDelEvent(EventLoop *eventLoop, int fd, int mask) {
-    struct epoll_event ee = {0};  /* avoid valgrind warning */
+    struct epoll_event ee = {0};
     int mask = eventLoop->events[fd].mask & (~delmask);
     ee.events = 0;
     if (mask & VA_READABLE) ee.events |= EPOLLIN;
@@ -65,7 +67,7 @@ int Poll::PollDelEvent(EventLoop *eventLoop, int fd, int mask) {
 
 int Poll::PollWaitEvent(EventLoop *eventLoop, struct timeval *tvp) {
     int nReady = 0;
-    int ret = epoll_wait(_epfd, _events, eventLoop->GetEventSize(),
+    int ret = epoll_wait(_epfd, _events, _events_num,
                          tvp ? (tvp->tv_sec*1000 + tvp->tv_usec/1000) : -1);
     if(ret > 0) {
         nReady = ret;

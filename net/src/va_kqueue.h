@@ -16,10 +16,13 @@ public:
     void PollFree(EventLoop *eventLoop);
     int PollAddEvent(EventLoop *eventLoop, int fd, int mask);
     int PollDelEvent(EventLoop *eventLoop, int fd, int mask);
+    bool Stop(const int &wakeup_fd);
+    int PollWaitEvent(EventLoop *eventLoop, struct timeval *tvp);
 
 private:
     int kqfd;
     struct kevent *events;
+    int _events_num;
 };
 
 
