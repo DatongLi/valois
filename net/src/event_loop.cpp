@@ -2,24 +2,28 @@
 #include "event_loop.h"
 
 EventLoop::EventLoop()
-        : _eventSize(0)
+        : _event_size(0)
         , _stop(true)
-        , events(NULL)
-        , fired(NULL)
+        , events(nullptr)
+        , fired(nullptr)
+        , poll(nullptr)
 {
     _wakeup_fds[0] = -1;
     _wakeup_fds[1] = -1;
 }
 
+
 EventLoop *EventLoop::CreateEventLoop(int setEventSize) {
-    _eventSize = setEventSize;
+    _event_size = setEventSize;
     if (pipe(_wakeup_fds) != 0) {
         return nullptr;
     }
-    if (-1 == poll.PollCreate(this)) {
+    poll = new Poll();
+    if (poll == nullptr || -1 == poll->PollCreate(this)) {
         return nullptr;
     }
     Start();
+    return this;
 }
 
 EventLoop::~EventLoop() {
@@ -28,6 +32,10 @@ EventLoop::~EventLoop() {
     if (_wakeup_fds[0] > 0) {
         close(_wakeup_fds[0]);
         close(_wakeup_fds[1]);
+    }
+    if(poll != nullptr) {
+        delete poll;
+        poll = nullptr;
     }
 }
 
@@ -49,7 +57,7 @@ bool EventLoop::Join() {
 }
 
 bool EventLoop::Stop() {
-    if(false == poll.Stop(_wakeup_fds[1])) {
+    if(false == poll->Stop(_wakeup_fds[1])) {
         return false;
     }
     _stop.store(true, std::memory_order_release);
@@ -58,7 +66,7 @@ bool EventLoop::Stop() {
 
 int AddFdPoll(int fd, int mask, EventHandler *event_handler) {
     RegisterFdEventHandler(fd, event_handler);
-    if(-1 == poll.PollAddEvent(this, fd, mask)) {
+    if(-1 == poll->PollAddEvent(this, fd, mask)) {
         return -1;
     }
     return 0;
@@ -66,7 +74,7 @@ int AddFdPoll(int fd, int mask, EventHandler *event_handler) {
 
 int DelFdPoll(int fd, int mask) {
     RemoveFdEventHandler(fd);
-    if(-1 == poll.PollDelEvent(this, fd, mask)) {
+    if(-1 == poll->PollDelEvent(this, fd, mask)) {
         return -1;
     }
     return 0;
@@ -95,7 +103,7 @@ static void GetTime(long *seconds, long *milliseconds)
 }
 
 int ProcessEvents(EventLoop *eventLoop, int flags) {
-    int processed = 0, numevents = 0;
+    int processed = 0, num_events = 0;
     if (!(flags & VA_TIME_EVENTS) && !(flags & VA_FILE_EVENTS)) return -1;
 
     if (eventLoop->maxfd != -1 ||
@@ -142,14 +150,14 @@ int ProcessEvents(EventLoop *eventLoop, int flags) {
 
         /* Call the multiplexing API, will return only on timeout or when
          * some event fires. */
-        numevents = poll.PollWaitEvent(eventLoop, tvp);
+        num_events = poll->PollWaitEvent(eventLoop, tvp);
 
         /* After sleep callback. */
         if (eventLoop->aftersleep != NULL && flags & AE_CALL_AFTER_SLEEP) {
             eventLoop->aftersleep(eventLoop);
         }
 
-        for (j = 0; j < numevents; j++) {
+        for (j = 0; j < num_events; j++) {
             int mask = eventLoop->fired[j].mask;
             int fd = eventLoop->fired[j].fd;
             std::map<int, EventHandler *>::iterator it = _event_handler_maps.find(fd);

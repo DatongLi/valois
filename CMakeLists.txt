@@ -4,6 +4,10 @@ link_libraries(pthread)
 
 include_directories(.)
 
+if(POLICY CMP0037)
+    cmake_policy(SET CMP0037 OLD)
+endif()
+
 add_subdirectory(thirdparty)
 add_subdirectory(mempool)
 add_subdirectory(threadpool)
@@ -20,6 +24,8 @@ set(CMAKE_BUILD_FILES_DIRECTORY ${dir})
 set(CMAKE_BUILD_DIRECTORY ${dir})
 set(CMAKE_BINARY_DIR  ${dir})
 SET(CMAKE_CACHEFILE_DIR ${dir})
+
+
 
 add_executable(test/gtest_test test/test.cpp test/unittest/gtest_test.cpp)
 target_link_libraries(test/gtest_test gtest_main gtest)

@@ -5,14 +5,12 @@
 #include "gtest/gtest.h"
 #include "test/test.h"
 
-#include "poller.h"
-
-Poller poller();
+#include "t.h"
 
 TEST(test, add)
 {
-    EXPECT_EQ(1, poller.add(2,-1));
-    EXPECT_EQ(5, poller.add(2,3));
+    EXPECT_EQ(1, add(2,-1));
+    EXPECT_EQ(5, add(2,3));
 }
 
 int main(int argc, char** argv)

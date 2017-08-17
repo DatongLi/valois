@@ -19,7 +19,7 @@
 
 #define VA_FILE_EVENTS 1
 #define VA_TIME_EVENTS 2
-#define VA_ALL_EVENTS (AE_FILE_EVENTS|AE_TIME_EVENTS)
+#define VA_ALL_EVENTS (VA_FILE_EVENTS|VA_TIME_EVENTS)
 #define VA_DONT_WAIT 4
 #define VA_CALL_AFTER_SLEEP 8
 
@@ -46,8 +46,8 @@ private:
     int RemoveFdEventHandler(int fd);
     void GetTime(long *seconds, long *milliseconds);
 
-    Poll poll;
-    int _eventSize;
+    Poll *poll;
+    int _event_size;
     std::atomic<bool> _stop;
     pthread_t _tid;
 

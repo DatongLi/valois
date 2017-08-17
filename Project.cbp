@@ -473,9 +473,66 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/threadpool/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="unittest/TEST_ADD">
+				<Option output="/Users/baidu/Desktop/workspace/valois/net/output/unittest/TEST_ADD" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/net/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 unittest/TEST_ADD"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unittest/TEST_ADD/fast">
+				<Option output="/Users/baidu/Desktop/workspace/valois/net/output/unittest/TEST_ADD" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/net/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 unittest/TEST_ADD/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/mempool/example/TestMempool.cpp">
 			<Option target="test/TestMempool"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/net/src/t.cpp">
+			<Option target="unittest/TEST_ADD"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/net/src/t.h">
+			<Option target="unittest/TEST_ADD"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/net/unittest/TEST_ADD.cpp">
+			<Option target="unittest/TEST_ADD"/>
 		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/test/test.cpp">
 			<Option target="test/gtest_test"/>
