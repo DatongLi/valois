@@ -8,11 +8,8 @@
 
 class EventHandler {
 public:
-    ReadEvent(int fd, void *clientData, int mask);
-    WriteEvent(int fd, void *clientData, int mask);
-
-private:
-    int fd;
+    int ReadEvent(int fd, void *clientData, int mask) = 0;
+    int WriteEvent(int fd, void *clientData, int mask) = 0;
 };
 
 

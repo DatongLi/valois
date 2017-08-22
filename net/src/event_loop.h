@@ -3,6 +3,7 @@
 
 #include "base/common.h"
 #include "event_handler.h"
+#include "socket_manager.h"
 #ifdef HAVE_EPOLL
     #include "va_epoll.c"
 #else
@@ -16,6 +17,7 @@
 #define VA_NONE 0
 #define VA_READABLE 1
 #define VA_WRITABLE 2
+#define VA_ET 4
 
 #define VA_FILE_EVENTS 1
 #define VA_TIME_EVENTS 2
@@ -27,6 +29,7 @@
 #define VA_DELETED_EVENT_ID -1
 
 class EventLoop {
+friend class Socket;
 public:
     EventLoop();
     virtual ~EventLoop();

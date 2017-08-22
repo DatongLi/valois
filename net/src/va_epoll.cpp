@@ -43,6 +43,7 @@ int Poll::PollAddEvent(EventLoop *eventLoop, int fd, int mask) {
     mask |= eventLoop->events[fd].mask;
     if (mask & VA_READABLE) ee.events |= EPOLLIN;
     if (mask & VA_WRITABLE) ee.events |= EPOLLOUT;
+    if (mask & VA_ET) ee.events |= EPOLLET;
     ee.data.fd = fd;
     if (epoll_ctl(_epfd, op, fd, &ee) == -1) return -1;
     return 0;

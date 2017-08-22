@@ -1,4 +1,3 @@
-
 #include "event_loop.h"
 
 EventLoop::EventLoop()
@@ -22,6 +21,9 @@ EventLoop *EventLoop::CreateEventLoop(int setEventSize) {
     if (poll == nullptr || -1 == poll->PollCreate(this)) {
         return nullptr;
     }
+    int listen_fd = Socket::BindSocket();
+    AddFdPoll(listen_fd, VA_READABLE | VA_WRITABLE | VA_ET,  new DefaultEventHandler(listen_fd));
+
     Start();
     return this;
 }
@@ -166,12 +168,12 @@ int ProcessEvents(EventLoop *eventLoop, int flags) {
             }
             EventHandler *handler = it->second;
             if (mask & AE_READABLE) {
-                handler->ReadProcess(fd, nullptr, mask);
+                handler->ReadEvent(fd, nullptr, mask);
             }
             if (mask & AE_WRITABLE) {
-                handler->ReadProcess(fd, nullptr, mask);
+                handler->WriteEvent(fd, nullptr, mask);
             }
-            processed++;
+            ++processed;
         }
     }
     if(_stop.load(std::memory_order_acquire)) { return false; }
