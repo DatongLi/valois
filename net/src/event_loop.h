@@ -60,7 +60,7 @@ private:
         int mask;
     } vaEvent;
 
-    std::map<int, EventHandler *> _event_handler_maps;
+    std::unique_ptr<std::map<int, EventHandler *>> _event_handler_maps;
     vaEvent *fired;
 
     /* Time event structure */

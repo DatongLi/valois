@@ -6,6 +6,7 @@ EventLoop::EventLoop()
         , events(nullptr)
         , fired(nullptr)
         , poll(new Poll())
+        , _event_handler_maps(new std::map<int, EventHandler *>)
 {
     _wakeup_fds[0] = -1;
     _wakeup_fds[1] = -1;
@@ -76,15 +77,15 @@ int DelFdPoll(int fd, int mask) {
     return 0;
 }
 
-int RegisterFdEventHandler(int fd, class EventHandler *event_handler) {
-    _event_handler_maps.insert(std::pair<int, EventHandler *>(fd, event_handler));
+int RegisterFdEventHandler(int fd, EventHandler *event_handler) {
+    _event_handler_maps->insert(std::pair<int, EventHandler *>(fd, event_handler));
     return 0;
 }
 
 int RemoveFdEventHandler(int fd) {
-    std::map<int, EventHandler *>::iterator it = _event_handler_maps.find(fd);
-    if (it != _event_handler_maps.end()) {
-        _event_handler_maps.erase(it);
+    std::map<int, EventHandler *>::iterator it = _event_handler_maps->find(fd);
+    if (it != _event_handler_maps->end()) {
+        _event_handler_maps->erase(it);
     }
     return 0;
 }
@@ -156,8 +157,8 @@ int ProcessEvents(EventLoop *eventLoop, int flags) {
         for (j = 0; j < num_events; j++) {
             int mask = eventLoop->fired[j].mask;
             int fd = eventLoop->fired[j].fd;
-            std::map<int, EventHandler *>::iterator it = _event_handler_maps.find(fd);
-            if(it == _event_handler_maps.end()) {
+            std::map<int, EventHandler *>::iterator it = _event_handler_maps->find(fd);
+            if(it == _event_handler_maps->end()) {
                 continue;
             }
             EventHandler *handler = it->second;
