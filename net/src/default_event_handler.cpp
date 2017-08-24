@@ -26,7 +26,7 @@ int DefaultEventHandler::ReadEvent(int fd, void *clientData, int mask) {
         socklen_t cli_len;
         int con_fd = accept(listen_fd, (struct sockaddr*)&cli_addr, &cli_len);
         SetNonBlocking(con_fd);
-
+        // add fd to epoll
     } else {
         do {
             n = read(fd, recv_line, BUFSIZE);

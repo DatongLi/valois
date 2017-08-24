@@ -5,19 +5,17 @@ EventLoop::EventLoop()
         , _stop(true)
         , events(nullptr)
         , fired(nullptr)
-        , poll(nullptr)
+        , poll(new Poll())
 {
     _wakeup_fds[0] = -1;
     _wakeup_fds[1] = -1;
 }
-
 
 EventLoop *EventLoop::CreateEventLoop(int setEventSize) {
     _event_size = setEventSize;
     if (pipe(_wakeup_fds) != 0) {
         return nullptr;
     }
-    poll = new Poll();
     if (poll == nullptr || -1 == poll->PollCreate(this)) {
         return nullptr;
     }
@@ -34,10 +32,6 @@ EventLoop::~EventLoop() {
     if (_wakeup_fds[0] > 0) {
         close(_wakeup_fds[0]);
         close(_wakeup_fds[1]);
-    }
-    if(poll != nullptr) {
-        delete poll;
-        poll = nullptr;
     }
 }
 

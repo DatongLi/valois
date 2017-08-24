@@ -12,6 +12,8 @@
 #include <array>
 #include <mutex>
 #include <condition_variable>
+#include <memory>
+#include <string>
 #include "config.h"
 
 namespace base {

@@ -49,7 +49,7 @@ private:
     int RemoveFdEventHandler(int fd);
     void GetTime(long *seconds, long *milliseconds);
 
-    Poll *poll;
+    std::unique_ptr<Poll> poll;
     int _event_size;
     std::atomic<bool> _stop;
     pthread_t _tid;
