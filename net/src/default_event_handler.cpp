@@ -19,8 +19,8 @@ int DefaultEventHandler::SetNonBlocking(int sock) {
 
 int DefaultEventHandler::ReadEvent(int fd, void *clientData, int mask) {
     int n = 0;
-    char recv_line[BUFFSIZE];
-    bzero(recv_line, BUFFSIZE);
+    char recv_line[BUFSIZE];
+    bzero(recv_line, BUFSIZE);
     if(fd == _listen_fd) {
         struct sockaddr_in cli_addr;
         socklen_t cli_len;

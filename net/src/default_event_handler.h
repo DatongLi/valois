@@ -8,11 +8,11 @@
 #include "event_handler.h"
 #include <fcntl.h>
 
-#define BUFFSIZE 1024
+#define BUFSIZE 1024
 
 class DefaultEventHandler : public EventHandler {
 public:
-    DefaultEventHandler(int fd) : _listen_fd(-1) {}
+    DefaultEventHandler() : _listen_fd(-1) {}
     DefaultEventHandler(int fd) : _listen_fd(fd) {}
     int ReadEvent(int fd, void *clientData, int mask);
     int WriteEvent(int fd, void *clientData, int mask);
