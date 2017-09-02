@@ -19,13 +19,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e20e0dee-9671-4e90-aa66-70dddfa7720f" name="Default" comment="update">
+    <list default="true" id="e20e0dee-9671-4e90-aa66-70dddfa7720f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/net/src/va_epoll.cpp" afterPath="$PROJECT_DIR$/net/src/va_epoll.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/net/src/va_kqueue.cpp" afterPath="$PROJECT_DIR$/net/src/va_kqueue.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/net/src/va_kqueue.h" afterPath="$PROJECT_DIR$/net/src/va_kqueue.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/net/src/va_select.cpp" afterPath="$PROJECT_DIR$/net/src/va_select.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/net/src/va_select.h" afterPath="$PROJECT_DIR$/net/src/va_select.h" />
     </list>
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -60,8 +55,8 @@
       <file leaf-file-name="default_event_handler.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/net/src/default_event_handler.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="48" />
+            <state relative-caret-position="317">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -70,8 +65,8 @@
       <file leaf-file-name="va_kqueue.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/net/src/va_kqueue.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="19" />
+            <state relative-caret-position="242">
+              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
               <folding>
                 <element signature="e#85#107#0" expanded="true" />
               </folding>
@@ -82,8 +77,18 @@
       <file leaf-file-name="va_epoll.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/net/src/va_epoll.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
+            <state relative-caret-position="-101">
+              <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event_loop.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/net/src/event_loop.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3718">
+              <caret line="169" column="13" lean-forward="true" selection-start-line="169" selection-start-column="13" selection-end-line="169" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -92,21 +97,44 @@
       <file leaf-file-name="va_kqueue.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/net/src/va_kqueue.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="426">
+              <caret line="78" column="31" lean-forward="false" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default_event_handler.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/net/src/default_event_handler.h">
+      <file leaf-file-name="event_loop.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/net/src/event_loop.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="954">
+              <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+              <folding>
+                <element signature="e#45#69#0" expanded="true" />
+                <element signature="e#147#168#0" expanded="true" />
+                <element signature="e#247#269#0" expanded="true" />
+                <marker date="1503583473000" expanded="true" signature="206:228" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socket_manager.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/net/src/socket_manager.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socket_manager.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/net/src/socket_manager.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding>
-                <element signature="e#127#153#0" expanded="true" />
-              </folding>
+              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,18 +142,8 @@
       <file leaf-file-name="poll_base.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/net/src/poll_base.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="event_handler.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/net/src/event_handler.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="352">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -332,7 +350,7 @@
       <configuration name="output/gtest_test" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
   </component>
-  <component name="TodoView" selected-index="3">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -349,6 +367,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32723576" sideWeight="0.4978701" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29471543" sideWeight="0.49361023" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17174797" sideWeight="0.5021299" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23373984" sideWeight="0.49574015" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24920128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17625134" sideWeight="0.5060423" order="2" side_tool="true" content_ui="tabs" />
@@ -360,7 +379,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670453" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39939025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -415,7 +433,8 @@
     <MESSAGE value="add event handler and Socket class" />
     <MESSAGE value="change poll pointer to unique_ptr" />
     <MESSAGE value="update unique ptr with event handler map" />
-    <option name="LAST_COMMIT_MESSAGE" value="update unique ptr with event handler map" />
+    <MESSAGE value="add kqueue code" />
+    <option name="LAST_COMMIT_MESSAGE" value="add kqueue code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -617,51 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/net/src/socket_manager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/src/socket_manager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/src/event_loop.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="169" column="13" lean-forward="true" selection-start-line="169" selection-start-column="13" selection-end-line="169" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/src/event_loop.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
-          <folding>
-            <element signature="e#45#69#0" expanded="true" />
-            <element signature="e#147#168#0" expanded="true" />
-            <element signature="e#247#269#0" expanded="true" />
-            <marker date="1503583473000" expanded="true" signature="206:228" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/src/poll_base.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/net/src/event_handler.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -698,14 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/net/src/default_event_handler.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/net/src/va_epoll.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -714,10 +680,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/net/src/va_kqueue.h">
+    <entry file="file://$PROJECT_DIR$/net/src/socket_manager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/net/src/socket_manager.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="19" />
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/net/src/poll_base.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/net/src/event_loop.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="57" column="28" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+          <folding>
+            <element signature="e#45#69#0" expanded="true" />
+            <element signature="e#147#168#0" expanded="true" />
+            <element signature="e#247#269#0" expanded="true" />
+            <marker date="1503583473000" expanded="true" signature="206:228" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/net/src/event_loop.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3718">
+          <caret line="169" column="13" lean-forward="true" selection-start-line="169" selection-start-column="13" selection-end-line="169" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/net/src/default_event_handler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/net/src/va_kqueue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding>
             <element signature="e#85#107#0" expanded="true" />
           </folding>
@@ -726,16 +745,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/net/src/va_epoll.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
+        <state relative-caret-position="-101">
+          <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/net/src/va_kqueue.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="426">
+          <caret line="78" column="31" lean-forward="false" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
           <folding />
         </state>
       </provider>
