@@ -19,6 +19,10 @@ int Poll::PollCreate(EventLoop *eventLoop) {
     return 0;
 }
 
+int EventResize(EventLoop *eventLoop, int setSize) {
+    return 0;
+}
+
 void Poll::PollFree(EventLoop *eventLoop) {
     if (nullptr != _events) {
         free(_events);

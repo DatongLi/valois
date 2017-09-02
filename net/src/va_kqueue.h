@@ -20,8 +20,8 @@ public:
     int PollWaitEvent(EventLoop *eventLoop, struct timeval *tvp);
 
 private:
-    int kqfd;
-    struct kevent *events;
+    int _kqfd;
+    struct kevent *_events;
     int _events_num;
 };
 
