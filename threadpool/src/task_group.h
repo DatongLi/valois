@@ -23,7 +23,7 @@ public:
     int GetStatus() { return _status; }
     void SetStatus(int status) { _status = status; }
     int RunTask() {
-        printf("RunTask fn = %p, arg = %p\n", _fn, _arg);
+        LOG(INFO) << "RunTask fn = " << _fn << ", arg = " << _arg;
         _fn(_arg);
         return TASK_FINISH;
     }

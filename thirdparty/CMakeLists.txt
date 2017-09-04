@@ -11,3 +11,4 @@ option(BUILD_GMOCK "Builds the googlemock subproject" ON)
 
 add_subdirectory( googlemock )
 add_subdirectory( gflags )
+add_subdirectory( glog )

@@ -68,7 +68,7 @@ namespace base {
         //while (!_done) {
         while(1) {
             if (taskGroup->TryPop(task)) {
-                printf("running tid = %d\n", taskGroup->getTid());
+                LOG(WARNING) << "running tid = " << taskGroup->getTid();
                 int status = task->RunTask();
                 if (status == TASK_FINISH) {
                     taskGroup->Finish(task);

@@ -17,6 +17,7 @@
 #include <gflags/gflags.h>
 #include <cstdio>
 #include "config.h"
+#include <thirdparty/glog/glog/logging.h>
 
 namespace base {
 

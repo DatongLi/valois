@@ -9,7 +9,7 @@ if(POLICY CMP0037)
 endif()
 
 add_subdirectory(thirdparty)
-
+link_libraries(glog)
 #set(gflags_DIR thirdparty/gflags)
 #find_package(gflags COMPONENTS nothreads_static)
 

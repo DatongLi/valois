@@ -52,3 +52,5 @@ threadpool/Makefile
 threadpool/CMakeFiles
 threadpool/cmake_install.cmake
 
+CPackConfig.cmake
+CPackSourceConfig.cmake
