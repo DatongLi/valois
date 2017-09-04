@@ -54,3 +54,12 @@ threadpool/cmake_install.cmake
 
 CPackConfig.cmake
 CPackSourceConfig.cmake
+thirdparty/gflags/DartConfiguration.tcl
+thirdparty/gflags/Testing/
+thirdparty/gflags/bin/
+thirdparty/gflags/gflags.cbp
+thirdparty/gflags/include/Users/
+thirdparty/gflags/test/CTestTestfile.cmake
+thirdparty/gflags/test/gflags_unittest-main.cc
+thirdparty/gflags/test/gflags_unittest_main.cc
+thirdparty/glog/Testing/

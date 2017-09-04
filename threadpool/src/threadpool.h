@@ -4,10 +4,11 @@
 
 #include "base/common.h"
 #include "task_group.h"
+#include <boost/noncopyable.hpp>
 
 namespace base {
 
-class ThreadPool {
+class ThreadPool : boost::noncopyable {
 public:
     ThreadPool();
     virtual  ~ThreadPool();

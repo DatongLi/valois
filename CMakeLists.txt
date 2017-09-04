@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=gnu++11")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++11")
+
 link_libraries(pthread)
 
 include_directories(.)
@@ -12,6 +13,14 @@ add_subdirectory(thirdparty)
 link_libraries(glog)
 #set(gflags_DIR thirdparty/gflags)
 #find_package(gflags COMPONENTS nothreads_static)
+
+set(BOOST_ROOT "thirdparty/boost")
+set(Boost_DEBUG OFF)
+find_package(Boost COMPONENTS system filesystem REQUIRED)
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS})
+    message(STATUS "Boost_FOUND...")
+endif()
 
 add_subdirectory(mempool)
 add_subdirectory(threadpool)
