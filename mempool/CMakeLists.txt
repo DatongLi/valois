@@ -1,4 +1,4 @@
-include_directories(src)
+include_directories(src mempool/src)
 set(dir output)
 file(MAKE_DIRECTORY ${dir})
 file(MAKE_DIRECTORY ${dir}/test)

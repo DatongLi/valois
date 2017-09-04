@@ -1,60 +1,32 @@
-#include <thread>
-#include "base/common.h"
-#include "base/thread_safe_queue.h"
 
 #ifndef _THREADPOOL_H
 #define _THREADPOOL_H
 
+#include "base/common.h"
+#include "task_group.h"
+
 namespace base {
 
-class Threadpool {
+class ThreadPool {
 public:
-    Threadpool() : done(false) {
-        unsigned const thread_count = std::thread::hardware_concurrency();
-        try {
-            for(unsigned i = 0; i < thread_count; ++i) {
-                threads.push_back(std::thread(&Threadpool::worker_thread, this));
-            }
-        } catch(...) {
-            done = true;
-            throw;
-        }
-    }
-
-    ~Threadpool() {
-        done = true;
-    }
-
-    template<typename FunctionType>
-    void submit(FunctionType f) {
-        work_queue.push(std::function<void()>(f));
-    }
-
-    bool join() {
-        for(int i = 0; i < threads.size(); ++i) {
-            threads[i].join();
-        }
-        done.store(true, std::memory_order_release);
-        return true;
-    }
+    ThreadPool();
+    virtual  ~ThreadPool();
+    void submit(void* (*fn)(void *), void *arg);
+    bool join();
 
 private:
-    std::atomic_bool done;
-    ThreadSafeQueue<std::function<void()> > work_queue;
-    std::vector<std::thread> threads;
-    //join_threads joiner;
+    static bool _done;
+    TaskGroup *_work_queue;
+    pthread_t *_threads;
+    int _thread_num;
 
-    void worker_thread() {
-        while(!done) {
-            std::function<void()> task;
-            if(work_queue.try_pop(task)) {
-                task();
-            } else {
-                std::this_thread::yield();
-            }
-        }
+    int PickRunThread() {
+        return 0;
     }
+
+    static void *WorkerThread(void *arg);
 };
 
 }
-#endif
+
+#endif // _THREADPOOL_H

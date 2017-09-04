@@ -8,19 +8,19 @@
 namespace base {
 
 template<class T>
-class Mempool : public Pool<T> {
+class MemPool : public Pool<T> {
 public:
-    Mempool() : _used_num(0), _elem_num(0) {}
+    MemPool() : _elem_num(0), _used_num(0) {}
 
-    Mempool(long elem_num) :
-    _used_num(0), _elem_num(elem_num)
+    MemPool(long elem_num) :
+    _elem_num(elem_num), _used_num(0)
     {
         if(false == createPool(elem_num)) {
             std::cout << "init pool failed" << std::endl;
         }
     }
 
-    ~Mempool() {
+    ~MemPool() {
         if(_used_num > 0) {
             std::cout << "Failed to release all elem in mempool, memory leak!" << std::endl;
         }
@@ -32,14 +32,14 @@ public:
         delete _freelist;
         _freelist = nullptr;
     }
-    Mempool(const Mempool&) = delete;
-
-    bool createPool(long elem_num);
+    MemPool(const MemPool&) = delete;
 
     bool getElem(T* &elem);
     bool putElem(T* elem);
 
 private:
+    bool createPool(long elem_num);
+
     int alignSizeOf(int object_size) {
         int size = floor(log2(object_size)) + 1;
         int real_size = exp2(size);
@@ -55,12 +55,12 @@ private:
 };
 
 template<class T>
-bool Mempool<T>::createPool(long elem_num) {
+bool MemPool<T>::createPool(long elem_num) {
     T *p;
     _freelist = new Ring<T *>(elem_num);
 #if 1
     char *_buf = new char[alignSizeOf(sizeof(T)) * elem_num];
-    if(_buf == nullptr) {return false;}
+    if(nullptr == _buf) {return false;}
     for(long i = 0; i < elem_num; ++i) {
         // always get the same addr, so need to add i when push
         p = new (_buf + sizeof(T) + _align_gap) T();
@@ -82,7 +82,7 @@ bool Mempool<T>::createPool(long elem_num) {
 }
 
 template<class T>
-bool Mempool<T>::getElem(T* &elem) {
+bool MemPool<T>::getElem(T* &elem) {
     ScopeSpinLock _list_lock;
     if(_used_num.load(std::memory_order_acquire) < _elem_num && _elem_num > 0) {
         _used_num.fetch_add(1, std::memory_order_release);
@@ -95,7 +95,7 @@ bool Mempool<T>::getElem(T* &elem) {
 }
 
 template<class T>
-bool Mempool<T>::putElem(T *elem) {
+bool MemPool<T>::putElem(T *elem) {
     ScopeSpinLock _list_lock;
     if(_used_num.load(std::memory_order_acquire) > 0 && _elem_num > 0) {
         _used_num.fetch_sub(1, std::memory_order_release);

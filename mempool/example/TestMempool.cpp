@@ -1,5 +1,5 @@
+
 #include "mempool.h"
-#include <gflags/gflags.h>
 
 DEFINE_int32(elem_num, 10, "pool elem number");
 
@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
     gflags::SetUsageMessage("some usage message");
     gflags::SetVersionString("1.0.0");
     gflags::ParseCommandLineFlags(&argc, &argv, true);
-    base::Mempool<Node> mpool(FLAGS_elem_num);
+    base::MemPool<Node> mpool(FLAGS_elem_num);
     Node *node;
     mpool.getElem(node);
     node->SetCnt(3);

@@ -14,6 +14,10 @@
 #include <condition_variable>
 #include <memory>
 #include <string>
+#include <gflags/gflags.h>
+extern "C" {
+#include "pthread.h"
+};
 #include "config.h"
 
 namespace base {

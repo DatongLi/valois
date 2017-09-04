@@ -3,6 +3,7 @@
  */
 
 #include "common.h"
+#include <stdio.h>
 
 #ifndef _RING_H
 #define _RING_H
