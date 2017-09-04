@@ -37,7 +37,7 @@ private:
 class TaskGroup {
 public:
     TaskGroup();
-    ~TaskGroup();
+    virtual ~TaskGroup();
     int Submit(void* (*fn)(void *), void* arg);
     int Finish(Task *task);
     bool TryPop(Task *&task);
