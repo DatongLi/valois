@@ -8,7 +8,6 @@
 #include "base/common.h"
 #include "base/thread_safe_queue.h"
 #include "mempool.h"
-#include "base/ring.h"
 
 #define TASK_FINISH 0
 #define TASK_RUNNING 1

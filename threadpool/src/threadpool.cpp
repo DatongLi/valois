@@ -5,7 +5,9 @@
 extern "C" {
 #include <unistd.h>
 }
-DEFINE_int32(thread_num, 1, "thread number");
+#include <cstdlib>
+
+DEFINE_int32(thread_num, 2, "thread number");
 
 namespace base {
 
@@ -48,6 +50,10 @@ namespace base {
         _work_queue[tid].Submit(fn, arg);
     }
 
+    int ThreadPool::PickRunThread() {
+        return rand()%_thread_num;
+    }
+
     bool ThreadPool::join() {
         for(int tid = 0; tid < _thread_num; ++tid) {
             pthread_join(_threads[tid], NULL);
@@ -62,6 +68,7 @@ namespace base {
         //while (!_done) {
         while(1) {
             if (taskGroup->TryPop(task)) {
+                printf("running tid = %d\n", taskGroup->getTid());
                 int status = task->RunTask();
                 if (status == TASK_FINISH) {
                     taskGroup->Finish(task);

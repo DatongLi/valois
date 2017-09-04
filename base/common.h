@@ -15,9 +15,7 @@
 #include <memory>
 #include <string>
 #include <gflags/gflags.h>
-extern "C" {
-#include "pthread.h"
-};
+#include <cstdio>
 #include "config.h"
 
 namespace base {

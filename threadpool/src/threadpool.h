@@ -20,9 +20,7 @@ private:
     pthread_t *_threads;
     int _thread_num;
 
-    int PickRunThread() {
-        return 0;
-    }
+    int PickRunThread();
 
     static void *WorkerThread(void *arg);
 };
