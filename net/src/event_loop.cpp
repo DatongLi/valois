@@ -61,7 +61,7 @@ bool EventLoop::Stop() {
     return true;
 }
 
-int AddFdPoll(int fd, int mask, EventHandler *event_handler) {
+int EventLoop::AddFdPoll(int fd, int mask, EventHandler *event_handler) {
     RegisterFdEventHandler(fd, event_handler);
     if(-1 == poll->PollAddEvent(this, fd, mask)) {
         return -1;
@@ -69,7 +69,7 @@ int AddFdPoll(int fd, int mask, EventHandler *event_handler) {
     return 0;
 }
 
-int DelFdPoll(int fd, int mask) {
+int EventLoop::DelFdPoll(int fd, int mask) {
     RemoveFdEventHandler(fd);
     if(-1 == poll->PollDelEvent(this, fd, mask)) {
         return -1;
@@ -77,12 +77,12 @@ int DelFdPoll(int fd, int mask) {
     return 0;
 }
 
-int RegisterFdEventHandler(int fd, EventHandler *event_handler) {
+int EventLoop::RegisterFdEventHandler(int fd, EventHandler *event_handler) {
     _event_handler_maps->insert(std::pair<int, EventHandler *>(fd, event_handler));
     return 0;
 }
 
-int RemoveFdEventHandler(int fd) {
+int EventLoop::RemoveFdEventHandler(int fd) {
     std::map<int, EventHandler *>::iterator it = _event_handler_maps->find(fd);
     if (it != _event_handler_maps->end()) {
         _event_handler_maps->erase(it);
@@ -90,7 +90,7 @@ int RemoveFdEventHandler(int fd) {
     return 0;
 }
 
-static void GetTime(long *seconds, long *milliseconds)
+void EventLoop::GetTime(long *seconds, long *milliseconds)
 {
     struct timeval tv;
 
@@ -99,7 +99,7 @@ static void GetTime(long *seconds, long *milliseconds)
     *milliseconds = tv.tv_usec/1000;
 }
 
-int ProcessEvents(EventLoop *eventLoop, int flags) {
+int EventLoop::ProcessEvents(EventLoop *eventLoop, int flags) {
     int processed = 0, num_events = 0;
     if (!(flags & VA_TIME_EVENTS) && !(flags & VA_FILE_EVENTS)) return -1;
 

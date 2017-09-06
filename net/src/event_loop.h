@@ -47,7 +47,8 @@ public:
 private:
     int RegisterFdEventHandler(int fd, EventHandler *event_handler);
     int RemoveFdEventHandler(int fd);
-    void GetTime(long *seconds, long *milliseconds);
+    static void GetTime(long *seconds, long *milliseconds);
+    int ProcessEvents(EventLoop *eventLoop, int flags);
 
     std::unique_ptr<Poll> poll;
     int _event_size;
