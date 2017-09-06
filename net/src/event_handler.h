@@ -8,8 +8,8 @@
 
 class EventHandler {
 public:
-    int ReadEvent(int fd, void *clientData, int mask) = 0;
-    int WriteEvent(int fd, void *clientData, int mask) = 0;
+    virtual int ReadEvent(int fd, void *clientData, int mask) = 0;
+    virtual int WriteEvent(int fd, void *clientData, int mask) = 0;
 };
 
 

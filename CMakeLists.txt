@@ -39,6 +39,6 @@ set(CMAKE_BUILD_DIRECTORY ${dir})
 set(CMAKE_BINARY_DIR  ${dir})
 SET(CMAKE_CACHEFILE_DIR ${dir})
 
-add_executable(test/gtest_test test/test.cpp test/unittest/gtest_test.cpp)
+add_executable(test/gtest_test test/test.cpp test/unittest/gtest_test.cpp net/unittest/TEST_POLL.cpp)
 target_link_libraries(test/gtest_test gtest_main gtest)
 add_test(NAME test/gtest_test COMMAND test/gtest_test)

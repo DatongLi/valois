@@ -5,12 +5,12 @@
 #include "event_handler.h"
 #include "socket_manager.h"
 #ifdef HAVE_EPOLL
-    #include "va_epoll.c"
+    #include "va_epoll.h"
 #else
     #ifdef HAVE_KQUEUE
-        #include "va_kqueue.c"
+        #include "va_kqueue.h"
     #else
-        #include "va_select.c"
+        #include "va_select.h"
     #endif
 #endif
 

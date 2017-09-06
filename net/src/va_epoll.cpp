@@ -76,7 +76,7 @@ int Poll::PollWaitEvent(EventLoop *eventLoop, struct timeval *tvp) {
                          tvp ? (tvp->tv_sec*1000 + tvp->tv_usec/1000) : -1);
     if(ret > 0) {
         nReady = ret;
-        for (int j = 0; j < numevents; j++) {
+        for (int j = 0; j < _events_num; j++) {
             int mask = 0;
             struct epoll_event *e = _events + j;
 
