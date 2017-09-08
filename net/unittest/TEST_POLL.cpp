@@ -4,11 +4,20 @@
 
 #include "gtest/gtest.h"
 #include "net/src/event_loop.h"
+#ifdef HAVE_EPOLL
+#include "net/src/va_epoll.h"
+#else
+#ifdef HAVE_KQUEUE
+#include "net/src/va_kqueue.h"
+#else
+#include "net/src/va_select.h"
+#endif
+#endif
 
 TEST(test, EventResize)
 {
-    PollBase *pb = new Poll();
-    EXPECT_EQ(1, pb->EventResize(NULL,0));
+    valois::net::PollBase *pb = new valois::net::Poll();
+    EXPECT_EQ(0, pb->EventResize(NULL, 0));
 }
 
 int main(int argc, char** argv)

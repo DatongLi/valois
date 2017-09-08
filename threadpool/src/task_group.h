@@ -12,7 +12,7 @@
 #define TASK_FINISH 0
 #define TASK_RUNNING 1
 #define TASK_ERROR 2
-
+namespace valois {
 namespace base {
 
 class Task {
@@ -51,5 +51,5 @@ private:
     int _tid;
 };
 }
-
+}
 #endif //_TASK_GROUP_H

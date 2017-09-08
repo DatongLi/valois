@@ -1,9 +1,22 @@
+
+#include "default_event_handler.h"
 #include "event_loop.h"
+#ifdef HAVE_EPOLL
+#include "va_epoll.h"
+#else
+#ifdef HAVE_KQUEUE
+#include "va_kqueue.h"
+#else
+#include "va_select.h"
+#endif
+#endif
+
+namespace valois {
+namespace net {
 
 EventLoop::EventLoop()
         : _event_size(0)
         , _stop(true)
-        , events(nullptr)
         , fired(nullptr)
         , poll(new Poll())
         , _event_handler_maps(new std::map<int, EventHandler *>)
@@ -46,8 +59,8 @@ bool EventLoop::Start() {
 }
 
 bool EventLoop::Join() {
-    if(_tid) {
-        pthread_join(_tid);
+    if(_tid != 0) {
+        pthread_join(_tid, NULL);
         _tid = 0;
     }
     return true;
@@ -103,15 +116,14 @@ int EventLoop::ProcessEvents(EventLoop *eventLoop, int flags) {
     int processed = 0, num_events = 0;
     if (!(flags & VA_TIME_EVENTS) && !(flags & VA_FILE_EVENTS)) return -1;
 
-    if (eventLoop->maxfd != -1 ||
-        ((flags & VA_TIME_EVENTS) && !(flags & VA_DONT_WAIT))) {
+    if (((flags & VA_TIME_EVENTS) && !(flags & VA_DONT_WAIT))) {
         int j;
         TimeEvent *shortest = nullptr;
         struct timeval tv, *tvp;
 
-        if (flags & VA_TIME_EVENTS && !(flags & VA_DONT_WAIT)) {
+        /*if (flags & VA_TIME_EVENTS && !(flags & VA_DONT_WAIT)) {
             shortest = SearchNearestTimer(eventLoop);
-        }
+        }*/
 
         if (shortest) {
             long now_sec, now_ms;
@@ -136,12 +148,12 @@ int EventLoop::ProcessEvents(EventLoop *eventLoop, int flags) {
             /* If we have to check for events but need to return
              * ASAP because of AE_DONT_WAIT we need to set the timeout
              * to zero */
-            if (flags & AE_DONT_WAIT) {
+            if (flags & VA_DONT_WAIT) {
                 tv.tv_sec = tv.tv_usec = 0;
                 tvp = &tv;
             } else {
                 /* Otherwise we can block */
-                tvp = NULL; /* wait forever */
+                tvp = nullptr; /* wait forever */
             }
         }
 
@@ -150,9 +162,9 @@ int EventLoop::ProcessEvents(EventLoop *eventLoop, int flags) {
         num_events = poll->PollWaitEvent(eventLoop, tvp);
 
         /* After sleep callback. */
-        if (eventLoop->aftersleep != NULL && flags & AE_CALL_AFTER_SLEEP) {
+        /*if (eventLoop->aftersleep != NULL && flags & VA_CALL_AFTER_SLEEP) {
             eventLoop->aftersleep(eventLoop);
-        }
+        }*/
 
         for (j = 0; j < num_events; j++) {
             int mask = eventLoop->fired[j].mask;
@@ -162,10 +174,10 @@ int EventLoop::ProcessEvents(EventLoop *eventLoop, int flags) {
                 continue;
             }
             EventHandler *handler = it->second;
-            if (mask & AE_READABLE) {
+            if (mask & VA_READABLE) {
                 handler->ReadEvent(fd, nullptr, mask);
             }
-            if (mask & AE_WRITABLE) {
+            if (mask & VA_WRITABLE) {
                 handler->WriteEvent(fd, nullptr, mask);
             }
             ++processed;
@@ -173,25 +185,25 @@ int EventLoop::ProcessEvents(EventLoop *eventLoop, int flags) {
     }
     if(_stop.load(std::memory_order_acquire)) { return false; }
     /* Check time events */
-    if (flags & AE_TIME_EVENTS) {
+    /*if (flags & VA_TIME_EVENTS) {
         processed += processTimeEvents(eventLoop);
-    }
+    }*/
     return processed; /* return the number of processed file/time events */
 }
 
 void *EventLoop::Run(void *args) {
     EventLoop *eventLoop = static_cast<EventLoop *>(args);
-    while(!_stop.load(std::memory_order_acquire)) {
-        if(-1 == ProcessEvents(eventLoop, VA_ALL_EVENTS | VA_CALL_AFTER_SLEEP)) {
+    while(!eventLoop->_stop.load(std::memory_order_acquire)) {
+        if(-1 == eventLoop->ProcessEvents(eventLoop, VA_ALL_EVENTS | VA_CALL_AFTER_SLEEP)) {
             break;
         }
     }
-    return;
-}
-
-static TimeEvent *SearchNearestTimer(EventLoop *eventLoop) {
     return nullptr;
 }
+
+/*static TimeEvent *SearchNearestTimer(EventLoop *eventLoop) {
+    return nullptr;
+}*/
 
 /*
 long long CreateTimeEvent(EventLoop *eventLoop, long long milliseconds,
@@ -238,3 +250,6 @@ static TimeEvent *SearchNearestTimer(EventLoop *eventLoop) {
     return nearest;
 }
 */
+
+}
+}

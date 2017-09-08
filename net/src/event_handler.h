@@ -5,6 +5,8 @@
 #ifndef PROJECT_EVENT_HANDLER_H
 #define PROJECT_EVENT_HANDLER_H
 
+namespace valois {
+namespace net {
 
 class EventHandler {
 public:
@@ -12,5 +14,7 @@ public:
     virtual int WriteEvent(int fd, void *clientData, int mask) = 0;
 };
 
+}
+}
 
 #endif //PROJECT_EVENT_HANDLER_H

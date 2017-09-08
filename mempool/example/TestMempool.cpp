@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
     globalInit(argc, argv);
     gflags::SetUsageMessage("some usage message");
     gflags::SetVersionString("1.0.0");
-    base::MemPool<Node> mpool(FLAGS_elem_num);
+    valois::base::MemPool<Node> mpool(FLAGS_elem_num);
     Node *node;
     mpool.getElem(node);
     node->SetCnt(3);

@@ -4,7 +4,7 @@
 
 #ifndef _MEMPOOL_H
 #define _MEMPOOL_H
-
+namespace valois {
 namespace base {
 
 template<class T>
@@ -106,6 +106,6 @@ bool MemPool<T>::putElem(T *elem) {
     }
     return true;
 }
-
+}
 }
 #endif

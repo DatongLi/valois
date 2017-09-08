@@ -5,7 +5,7 @@
 #include "base/common.h"
 #include "task_group.h"
 #include <boost/noncopyable.hpp>
-
+namespace valois {
 namespace base {
 
 class ThreadPool : boost::noncopyable {
@@ -27,5 +27,5 @@ private:
 };
 
 }
-
+}
 #endif // _THREADPOOL_H

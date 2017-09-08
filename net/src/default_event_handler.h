@@ -10,6 +10,9 @@
 
 #define BUFSIZE 1024
 
+namespace valois {
+namespace net {
+
 class DefaultEventHandler : public EventHandler {
 public:
     DefaultEventHandler() : _listen_fd(-1) {}
@@ -21,5 +24,7 @@ private:
     int _listen_fd;
 };
 
+}
+}
 
 #endif //PROJECT_DEFAULT_EVENT_HANDLER_H

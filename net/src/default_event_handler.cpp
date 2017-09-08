@@ -1,8 +1,14 @@
 //
 // Created by Li,Datong on 22/08/2017.
 //
-
+#include "base/common.h"
 #include "default_event_handler.h"
+#include <strings.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+
+namespace valois {
+namespace net {
 
 int DefaultEventHandler::SetNonBlocking(int sock) {
     int opts;
@@ -24,7 +30,7 @@ int DefaultEventHandler::ReadEvent(int fd, void *clientData, int mask) {
     if(fd == _listen_fd) {
         struct sockaddr_in cli_addr;
         socklen_t cli_len;
-        int con_fd = accept(listen_fd, (struct sockaddr*)&cli_addr, &cli_len);
+        int con_fd = ::accept(_listen_fd, (struct sockaddr*)&cli_addr, &cli_len);
         SetNonBlocking(con_fd);
         // add fd to epoll
     } else {
@@ -38,4 +44,6 @@ int DefaultEventHandler::ReadEvent(int fd, void *clientData, int mask) {
 int DefaultEventHandler::WriteEvent(int fd, void *clientData, int mask) {
 
     return 0;
+}
+}
 }

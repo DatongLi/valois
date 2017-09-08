@@ -11,11 +11,16 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <unistd.h>
+namespace valois {
+namespace net {
 
 class Socket {
-    void SetNonBlocking(int sock);
-    int BindSocket();
+public:
+    static void SetNonBlocking(int sock);
+    static int BindSocket();
 };
 
+}
+}
 
 #endif //PROJECT_SOCKET_MANAGER_H

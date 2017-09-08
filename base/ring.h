@@ -7,7 +7,7 @@
 
 #ifndef _RING_H
 #define _RING_H
-
+namespace valois {
 namespace base {
 
 template<typename T>
@@ -100,5 +100,5 @@ private:
 };
 
 }
-
+}
 #endif

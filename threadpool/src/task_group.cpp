@@ -3,10 +3,10 @@
 //
 
 #include "task_group.h"
-#include <stdio.h>
+#include <cstdio>
 
 DEFINE_int32(task_num_per_group, 128, "task number per group");
-
+namespace valois {
 namespace base {
     TaskGroup::TaskGroup()
             : _task_num_per_group(FLAGS_task_num_per_group) {
@@ -51,4 +51,5 @@ namespace base {
         _tid = tid;
         return 0;
     }
+}
 }

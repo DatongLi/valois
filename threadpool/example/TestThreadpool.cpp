@@ -36,7 +36,7 @@ int globalClean() {
 int main(int argc, char** argv) {
     globalInit(argc, argv);
     LOG(INFO) << "main begin";
-    base::ThreadPool tpool;
+    valois::base::ThreadPool tpool;
     int a = 0;
     tpool.submit(printA, (void *)&(a));
     int b = 1;

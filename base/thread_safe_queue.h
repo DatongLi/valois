@@ -2,7 +2,7 @@
 
 #ifndef _THREAD_SAFE_QUEUE_H
 #define _THREAD_SAFE_QUEUE_H
-
+namespace valois {
 namespace base
 {
 
@@ -66,5 +66,5 @@ private:
 	std::condition_variable data_con;
 };
 }
-
+}
 #endif

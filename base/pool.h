@@ -2,7 +2,7 @@
 #define _POOL_H
 
 #include "common.h"
-
+namespace valois {
 namespace base {
 
 template<class T>
@@ -14,5 +14,5 @@ public:
 };
 
 }
-
+}
 #endif

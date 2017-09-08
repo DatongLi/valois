@@ -1,18 +1,12 @@
+
+
 #ifndef _EVENT_LOOP_H
 #define _EVENT_LOOP_H
 
 #include "base/common.h"
 #include "event_handler.h"
 #include "socket_manager.h"
-#ifdef HAVE_EPOLL
-    #include "va_epoll.h"
-#else
-    #ifdef HAVE_KQUEUE
-        #include "va_kqueue.h"
-    #else
-        #include "va_select.h"
-    #endif
-#endif
+#include "poll_base.h"
 
 #define VA_NONE 0
 #define VA_READABLE 1
@@ -28,19 +22,23 @@
 #define VA_NOMORE -1
 #define VA_DELETED_EVENT_ID -1
 
+namespace valois {
+namespace net {
+
 class EventLoop {
 friend class Socket;
+friend class Poll;
 public:
     EventLoop();
     virtual ~EventLoop();
 
     EventLoop *CreateEventLoop(int setEventSize);
-    int GetEventSize() const { return _eventSize; }
+    int GetEventSize() const { return _event_size; }
 
     bool Start();
     bool Stop();
-    void* Run(void* args);
-
+    static void* Run(void* args);
+    bool Join();
     int AddFdPoll(int fd, int mask, EventHandler *event_handler);
     int DelFdPoll(int fd, int mask);
 
@@ -50,10 +48,10 @@ private:
     static void GetTime(long *seconds, long *milliseconds);
     int ProcessEvents(EventLoop *eventLoop, int flags);
 
-    std::unique_ptr<Poll> poll;
     int _event_size;
     std::atomic<bool> _stop;
     pthread_t _tid;
+    std::unique_ptr<PollBase> poll;
 
     /* A fired event */
     typedef struct vaEvent {
@@ -76,4 +74,6 @@ private:
     int _wakeup_fds[2];
 };
 
+}
+}
 #endif

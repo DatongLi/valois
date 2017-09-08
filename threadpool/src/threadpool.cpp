@@ -8,7 +8,7 @@ extern "C" {
 #include <cstdlib>
 
 DEFINE_int32(thread_num, 2, "thread number");
-
+namespace valois {
 namespace base {
 
     ThreadPool::ThreadPool() {
@@ -83,4 +83,5 @@ namespace base {
         }
         return nullptr;
     }
+}
 }

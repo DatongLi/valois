@@ -9,6 +9,6 @@ option(BUILD_GTEST "Builds the googletest subproject" OFF)
 #Note that googlemock target already builds googletest
 option(BUILD_GMOCK "Builds the googlemock subproject" ON)
 
-add_subdirectory( googlemock )
-add_subdirectory( gflags )
-add_subdirectory( glog )
+#add_subdirectory( googlemock )
+#add_subdirectory( gflags )
+#add_subdirectory( glog )

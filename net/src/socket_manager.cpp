@@ -7,6 +7,10 @@
 DEFINE_int32(server_port, 8001, "server port for listening any connection request!");
 DEFINE_int32(LISTENQ, 1024, "server port for listening any connection request!");
 
+namespace valois {
+namespace net {
+
+
 int Socket::BindSocket() {
     struct sockaddr_in server_addr;
     int listen_fd = socket(AF_INET, SOCK_STREAM, 0);
@@ -18,4 +22,11 @@ int Socket::BindSocket() {
     bind(listen_fd, (struct sockaddr*)&server_addr, sizeof(server_addr));
     listen(listen_fd, FLAGS_LISTENQ);
     return listen_fd;
+}
+
+void Socket::SetNonBlocking(int sock) {
+
+}
+
+}
 }
