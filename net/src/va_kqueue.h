@@ -13,7 +13,7 @@
 
 namespace valois {
 namespace net {
-
+class EventLoop;
 class Poll : public PollBase {
 public:
     Poll() : _kqfd(-1), _events(nullptr), _events_num(0) {}
@@ -25,6 +25,7 @@ public:
         }
         _events_num = 0;
     }
+
     int PollCreate(EventLoop *eventLoop) {
         _kqfd = kqueue();
         if(_kqfd == -1) {

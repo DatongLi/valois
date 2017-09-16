@@ -5,15 +5,14 @@
 #include "gtest/gtest.h"
 #include "net/src/event_loop.h"
 #ifdef HAVE_EPOLL
-#include "net/src/va_epoll.h"
-#else
-#ifdef HAVE_KQUEUE
-#include "net/src/va_kqueue.h"
-#else
-#include "net/src/va_select.h"
+    #include "va_epoll.h"
+    #else
+        #ifdef HAVE_KQUEUE
+            #include "va_kqueue.h"
+        #else
+            #include "va_select.h"
+        #endif
 #endif
-#endif
-
 TEST(test, EventResize)
 {
     valois::net::PollBase *pb = new valois::net::Poll();

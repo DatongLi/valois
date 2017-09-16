@@ -5,7 +5,6 @@
 
 #include "base/common.h"
 #include "event_handler.h"
-#include "socket_manager.h"
 #include "poll_base.h"
 
 #define VA_NONE 0
@@ -26,7 +25,6 @@ namespace valois {
 namespace net {
 
 class EventLoop {
-friend class Socket;
 friend class Poll;
 public:
     EventLoop();
@@ -64,9 +62,9 @@ private:
 
     /* Time event structure */
     typedef struct TimeEvent {
-        long long id; /* time event identifier. */
-        long when_sec; /* seconds */
-        long when_ms; /* milliseconds */
+        long long id;                           /* time event identifier. */
+        long when_sec;                          /* seconds */
+        long when_ms;                           /* milliseconds */
         struct TimeEvent *next;
     } TimeEvent;
 

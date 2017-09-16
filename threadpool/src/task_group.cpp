@@ -9,7 +9,8 @@ DEFINE_int32(task_num_per_group, 128, "task number per group");
 namespace valois {
 namespace base {
     TaskGroup::TaskGroup()
-            : _task_num_per_group(FLAGS_task_num_per_group) {
+            : _task_num_per_group(FLAGS_task_num_per_group)
+            , _stop(false) {
         _task_pool = new base::MemPool<base::Task>(_task_num_per_group);
         if (nullptr == _task_pool) {
             exit(-1);
@@ -36,12 +37,14 @@ namespace base {
         _task_pool->putElem(task);
         return 0;
     }
+
     bool TaskGroup::TryPop(Task *&task) {
         if(_running_queue.empty()) return false;
         task = _running_queue.back();
         _running_queue.pop_back();
         return true;
     }
+
     bool TaskGroup::Push(Task *task) {
         _running_queue.push_back(task);
         return true;
@@ -50,6 +53,10 @@ namespace base {
     int TaskGroup::setTid(int tid) {
         _tid = tid;
         return 0;
+    }
+
+    bool TaskGroup::IsEmpty() {
+        return _running_queue.empty();
     }
 }
 }

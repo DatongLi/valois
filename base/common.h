@@ -18,9 +18,6 @@
 #include <cstdio>
 #include "config.h"
 #include <thirdparty/glog/glog/logging.h>
-extern "C" {
-#include <unistd.h>
-};
 
 namespace valois {
 namespace base {

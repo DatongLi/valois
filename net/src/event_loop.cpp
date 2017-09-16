@@ -1,14 +1,15 @@
 
 #include "default_event_handler.h"
 #include "event_loop.h"
+
 #ifdef HAVE_EPOLL
-#include "va_epoll.h"
+    #include "va_epoll.h"
 #else
-#ifdef HAVE_KQUEUE
-#include "va_kqueue.h"
-#else
-#include "va_select.h"
-#endif
+    #ifdef HAVE_KQUEUE
+        #include "va_kqueue.h"
+    #else
+        #include "va_select.h"
+    #endif
 #endif
 
 namespace valois {
@@ -17,9 +18,9 @@ namespace net {
 EventLoop::EventLoop()
         : _event_size(0)
         , _stop(true)
-        , fired(nullptr)
         , poll(new Poll())
         , _event_handler_maps(new std::map<int, EventHandler *>)
+        , fired(nullptr)
 {
     _wakeup_fds[0] = -1;
     _wakeup_fds[1] = -1;
@@ -33,7 +34,7 @@ EventLoop *EventLoop::CreateEventLoop(int setEventSize) {
     if (poll == nullptr || -1 == poll->PollCreate(this)) {
         return nullptr;
     }
-    int listen_fd = Socket::BindSocket();
+    int listen_fd = DefaultEventHandler::BindSocket();
     AddFdPoll(listen_fd, VA_READABLE | VA_WRITABLE | VA_ET,  new DefaultEventHandler(listen_fd));
 
     Start();
@@ -175,10 +176,10 @@ int EventLoop::ProcessEvents(EventLoop *eventLoop, int flags) {
             }
             EventHandler *handler = it->second;
             if (mask & VA_READABLE) {
-                handler->ReadEvent(fd, nullptr, mask);
+                handler->ReadEvent(fd, (void *)eventLoop, mask);
             }
             if (mask & VA_WRITABLE) {
-                handler->WriteEvent(fd, nullptr, mask);
+                handler->WriteEvent(fd, (void *)eventLoop, mask);
             }
             ++processed;
         }

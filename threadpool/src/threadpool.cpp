@@ -8,6 +8,7 @@ extern "C" {
 #include <cstdlib>
 
 DEFINE_int32(thread_num, 2, "thread number");
+
 namespace valois {
 namespace base {
 
@@ -65,8 +66,8 @@ namespace base {
     void *ThreadPool::WorkerThread(void *arg) {
         TaskGroup *taskGroup = (TaskGroup *) arg;
         Task *task = nullptr;
-        //while (!_done) {
-        while(1) {
+        while (!taskGroup->_stop.load(std::memory_order_acquire)
+                || !taskGroup->IsEmpty()) {
             if (taskGroup->TryPop(task)) {
                 LOG(WARNING) << "running tid = " << taskGroup->getTid();
                 int status = task->RunTask();

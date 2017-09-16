@@ -6,7 +6,6 @@ file(MAKE_DIRECTORY ${dir}/unittest)
 
 add_executable(unittest/TEST_POLL
         src/default_event_handler.cpp
-        src/socket_manager.cpp
         src/event_loop.cpp
         unittest/TEST_POLL.cpp
         )

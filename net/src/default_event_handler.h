@@ -6,7 +6,6 @@
 #define PROJECT_DEFAULT_EVENT_HANDLER_H
 
 #include "event_handler.h"
-#include <fcntl.h>
 
 #define BUFSIZE 1024
 
@@ -19,8 +18,9 @@ public:
     DefaultEventHandler(int fd) : _listen_fd(fd) {}
     int ReadEvent(int fd, void *clientData, int mask);
     int WriteEvent(int fd, void *clientData, int mask);
+    static int BindSocket();
+    static int SetNonBlocking(int sock);
 private:
-    int SetNonBlocking(int sock);
     int _listen_fd;
 };
 

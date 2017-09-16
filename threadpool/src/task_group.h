@@ -34,6 +34,7 @@ private:
 };
 
 class TaskGroup {
+friend class ThreadPool;
 public:
     TaskGroup();
     virtual ~TaskGroup();
@@ -43,12 +44,14 @@ public:
     bool Push(Task *task);
     int setTid(int tid);
     int getTid() { return _tid; };
+    bool IsEmpty();
 private:
     base::MemPool<base::Task> *_task_pool;
     //ThreadSafeQueue<base::Task *> _running_queue;
     std::deque<Task *> _running_queue;
     int _task_num_per_group;
     int _tid;
+    std::atomic<bool> _stop;
 };
 }
 }
