@@ -17,6 +17,7 @@ public:
     DefaultEventHandler() : _listen_fd(-1) {}
     DefaultEventHandler(int fd) : _listen_fd(fd) {}
     int ReadEvent(int fd, void *clientData, int mask);
+    int CutMessage();
     int WriteEvent(int fd, void *clientData, int mask);
     static int BindSocket();
     static int SetNonBlocking(int sock);

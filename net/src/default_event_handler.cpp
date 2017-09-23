@@ -55,8 +55,17 @@ int DefaultEventHandler::ReadEvent(int fd, void *clientData, int mask) {
     } else {
         do {
             n = read(fd, recv_line, BUFSIZE);
-        } while(n > 0);
-        // TODO : deal with the data!
+            if (n < 0) {
+                // read the wrong value
+                break;
+            }  else if (n == 0) {
+                // read empty
+                break;
+            }
+
+        } while(true);
+        // TODO : deal with the data by calling user's callback
+
     }
     return 0;
 }

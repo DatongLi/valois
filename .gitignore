@@ -10,7 +10,6 @@ cmake_install.cmake
 cmake-build-debug
 CMakeFiles/
 
-net/example/
 net/output
 net/.DS_Store
 net/Makefile
