@@ -1,0 +1,6 @@
+syntax = "proto2";
+package example;
+message Hello {
+required int32 id = 1;
+required string info = 2;
+}
