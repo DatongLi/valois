@@ -4,11 +4,13 @@
 
 #include "base/common.h"
 #include "task_group.h"
-#include <boost/noncopyable.hpp>
+//#include <boost/noncopyable.hpp>
 namespace valois {
 namespace base {
 
-class ThreadPool : boost::noncopyable {
+static std::atomic<bool> _stop;
+
+class ThreadPool { //: boost::noncopyable {
 public:
     ThreadPool();
     virtual  ~ThreadPool();
@@ -22,6 +24,8 @@ private:
     int _thread_num;
 
     int PickRunThread();
+
+    int StealTask() {}
 
     static void *WorkerThread(void *arg);
 };

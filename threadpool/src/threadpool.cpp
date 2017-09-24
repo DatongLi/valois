@@ -13,7 +13,7 @@ namespace valois {
 namespace base {
 
     ThreadPool::ThreadPool() {
-        //_done.store(false, std::memory_order_release);
+        _stop.store(false, std::memory_order_release);
         _thread_num = FLAGS_thread_num;
         _threads = new pthread_t[_thread_num];
         if(nullptr == _threads) {
@@ -43,7 +43,6 @@ namespace base {
             delete [] _work_queue;
             _work_queue = nullptr;
         }
-        //_done.store(true, std::memory_order_release);
     }
 
     void ThreadPool::submit(void* (*fn)(void *), void *arg) {
@@ -59,14 +58,13 @@ namespace base {
         for(int tid = 0; tid < _thread_num; ++tid) {
             pthread_join(_threads[tid], NULL);
         }
-        //_done.store(true, std::memory_order_release);
         return true;
     }
 
     void *ThreadPool::WorkerThread(void *arg) {
         TaskGroup *taskGroup = (TaskGroup *) arg;
         Task *task = nullptr;
-        while (!taskGroup->_stop.load(std::memory_order_acquire)
+        while (!_stop.load(std::memory_order_acquire)
                 || !taskGroup->IsEmpty()) {
             if (taskGroup->TryPop(task)) {
                 LOG(WARNING) << "running tid = " << taskGroup->getTid();

@@ -9,8 +9,7 @@ DEFINE_int32(task_num_per_group, 128, "task number per group");
 namespace valois {
 namespace base {
     TaskGroup::TaskGroup()
-            : _task_num_per_group(FLAGS_task_num_per_group)
-            , _stop(false) {
+            : _task_num_per_group(FLAGS_task_num_per_group) {
         _task_pool = new base::MemPool<base::Task>(_task_num_per_group);
         if (nullptr == _task_pool) {
             exit(-1);

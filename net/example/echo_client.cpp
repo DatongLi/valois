@@ -5,15 +5,6 @@
 #include "echo.pb.h"
 #include "user_handler.h"
 
-class EchoHandler : public UserHandler {
-public:
-    EchoHandler() {}
-    virtual ~EchoHandler() {}
-    RequestParse() {}
-    RequestProcess() {}
-    Response() {}
-};
-
 int globalInit(int &argc, char* argv[]) {
     google::InitGoogleLogging(argv[0]);
     FLAGS_log_dir="log";

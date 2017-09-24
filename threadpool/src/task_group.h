@@ -51,7 +51,6 @@ private:
     std::deque<Task *> _running_queue;
     int _task_num_per_group;
     int _tid;
-    std::atomic<bool> _stop;
 };
 }
 }
