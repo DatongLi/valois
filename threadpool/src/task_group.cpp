@@ -6,6 +6,7 @@
 #include <cstdio>
 
 DEFINE_int32(task_num_per_group, 128, "task number per group");
+
 namespace valois {
 namespace base {
     TaskGroup::TaskGroup()

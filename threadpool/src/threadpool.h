@@ -25,7 +25,7 @@ private:
 
     int PickRunThread();
 
-    int StealTask() {}
+    int StealTask() { return 0; }
 
     static void *WorkerThread(void *arg);
 };

@@ -8,6 +8,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <fcntl.h>
+#include <string>
 
 DEFINE_int32(server_port, 8001, "server port for listening any connection request!");
 DEFINE_int32(LISTENQ, 1024, "server port for listening any connection request!");
@@ -42,10 +43,8 @@ int DefaultEventHandler::SetNonBlocking(int sock) {
 }
 
 int DefaultEventHandler::ReadEvent(int fd, void *clientData, int mask) {
-    EventLoop *eventLoop = (EventLoop *)clientData;
-    int n = 0;
-    char recv_line[BUFSIZE];
-    bzero(recv_line, BUFSIZE);
+    EventLoop *eventLoop = static_cast<EventLoop *>clientData;
+    int ret = -1;
     if(fd == _listen_fd) {
         struct sockaddr_in cli_addr;
         socklen_t cli_len;
@@ -53,21 +52,34 @@ int DefaultEventHandler::ReadEvent(int fd, void *clientData, int mask) {
         SetNonBlocking(con_fd);
         eventLoop->AddFdPoll(con_fd, VA_READABLE | VA_WRITABLE | VA_ET, this);
     } else {
+        std::string message;
+        message.reserve(BUFSIZE);
+        char* buf = &message[0];
+        int pos = 0;
+        ssize_t n = 0;
+
         do {
-            n = read(fd, recv_line, BUFSIZE);
+            n = read(fd, buf + pos, message.capacity() - pos - 1);
             if (n < 0) {
-                // read the wrong value
-                break;
+                // errno handle
+                if(errno == EAGAIN) {
+                    continue;
+                }
+                goto OUT;
             }  else if (n == 0) {
                 // read empty
                 break;
             }
-
+            pos += n;
+            message.reserve(message.capacity() * 1.5);
         } while(true);
-        // TODO : deal with the data by calling user's callback
+        ret = pos;
+        // TODO : deal with the data by calling user's callback, policy handler
 
     }
-    return 0;
+    return ret;
+OUT:
+    return -1;
 }
 
 int DefaultEventHandler::WriteEvent(int fd, void *clientData, int mask) {

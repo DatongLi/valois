@@ -30,7 +30,7 @@ public:
     EventLoop();
     virtual ~EventLoop();
 
-    EventLoop *CreateEventLoop(int setEventSize);
+    bool CreateEventLoop(int setEventSize);
     int GetEventSize() const { return _event_size; }
 
     bool Start();
@@ -71,6 +71,8 @@ private:
     // wakeup the epoll from epoll_wait when call Stop()
     int _wakeup_fds[2];
 };
+
+EventLoop* GetGlobalLoop();
 
 }
 }

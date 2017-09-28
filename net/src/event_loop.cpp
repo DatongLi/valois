@@ -1,6 +1,7 @@
 
 #include "default_event_handler.h"
 #include "event_loop.h"
+#include <thread>
 
 #ifdef HAVE_EPOLL
     #include "va_epoll.h"
@@ -26,19 +27,19 @@ EventLoop::EventLoop()
     _wakeup_fds[1] = -1;
 }
 
-EventLoop *EventLoop::CreateEventLoop(int setEventSize) {
+bool EventLoop::CreateEventLoop(int setEventSize) {
     _event_size = setEventSize;
     if (pipe(_wakeup_fds) != 0) {
-        return nullptr;
+        return false;
     }
     if (poll == nullptr || -1 == poll->PollCreate(this)) {
-        return nullptr;
+        return false;
     }
     int listen_fd = DefaultEventHandler::BindSocket();
     AddFdPoll(listen_fd, VA_READABLE | VA_WRITABLE | VA_ET,  new DefaultEventHandler(listen_fd));
 
     Start();
-    return this;
+    return true;
 }
 
 EventLoop::~EventLoop() {
@@ -97,7 +98,7 @@ int EventLoop::RegisterFdEventHandler(int fd, EventHandler *event_handler) {
 }
 
 int EventLoop::RemoveFdEventHandler(int fd) {
-    std::map<int, EventHandler *>::iterator it = _event_handler_maps->find(fd);
+    auto it = _event_handler_maps->find(fd);
     if (it != _event_handler_maps->end()) {
         _event_handler_maps->erase(it);
     }
@@ -108,7 +109,7 @@ void EventLoop::GetTime(long *seconds, long *milliseconds)
 {
     struct timeval tv;
 
-    gettimeofday(&tv, NULL);
+    gettimeofday(&tv, nullptr);
     *seconds = tv.tv_sec;
     *milliseconds = tv.tv_usec/1000;
 }
@@ -170,7 +171,7 @@ int EventLoop::ProcessEvents(EventLoop *eventLoop, int flags) {
         for (j = 0; j < num_events; j++) {
             int mask = eventLoop->fired[j].mask;
             int fd = eventLoop->fired[j].fd;
-            std::map<int, EventHandler *>::iterator it = _event_handler_maps->find(fd);
+            auto it = _event_handler_maps->find(fd);
             if(it == _event_handler_maps->end()) {
                 continue;
             }
@@ -200,6 +201,22 @@ void *EventLoop::Run(void *args) {
         }
     }
     return nullptr;
+}
+
+EventLoop* loop;
+std::once_flag ONCE_FLAG;
+
+void GlobalInit() {
+    loop = new EventLoop();
+    if(nullptr == loop) {
+        exit(-1);
+    }
+    loop->CreateEventLoop(128);
+}
+
+EventLoop* GetGlobalLoop() {
+    std::call_once(ONCE_FLAG, GlobalInit);
+    return loop;
 }
 
 /*static TimeEvent *SearchNearestTimer(EventLoop *eventLoop) {
