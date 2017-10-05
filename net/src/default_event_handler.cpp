@@ -9,6 +9,7 @@
 #include <arpa/inet.h>
 #include <fcntl.h>
 #include <string>
+#include "example/echo.pb.h"
 
 DEFINE_int32(server_port, 8001, "server port for listening any connection request!");
 DEFINE_int32(LISTENQ, 1024, "server port for listening any connection request!");
@@ -43,7 +44,7 @@ int DefaultEventHandler::SetNonBlocking(int sock) {
 }
 
 int DefaultEventHandler::ReadEvent(int fd, void *clientData, int mask) {
-    EventLoop *eventLoop = static_cast<EventLoop *>clientData;
+    EventLoop *eventLoop = static_cast<EventLoop *>(clientData);
     int ret = -1;
     if(fd == _listen_fd) {
         struct sockaddr_in cli_addr;
@@ -75,7 +76,12 @@ int DefaultEventHandler::ReadEvent(int fd, void *clientData, int mask) {
         } while(true);
         ret = pos;
         // TODO : deal with the data by calling user's callback, policy handler
-
+        example::Hello hel;
+        if(!hel.ParseFromString(message)) {
+            goto OUT;
+        }
+        std::cout << "id = " << hel.id() << " , info = " << hel.info() << std::endl;
+        // TODO: response to client after getting request
     }
     return ret;
 OUT:
@@ -85,6 +91,7 @@ OUT:
 int DefaultEventHandler::WriteEvent(int fd, void *clientData, int mask) {
     EventLoop *eventLoop = (EventLoop *)clientData;
     // TODO : write handle
+
     return 0;
 }
 

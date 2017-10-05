@@ -14,6 +14,8 @@ add_subdirectory( thirdparty/glog )
 include_directories(${GFLAGS_INCLUDE_DIR})
 link_libraries(gflags)
 link_libraries(glog)
+include_directories(thirdparty/protobuf/include)
+link_libraries(thirdparty/protobuf/lib)
 
 #set(BOOST_ROOT "thirdparty/boost")
 #set(Boost_DEBUG OFF)

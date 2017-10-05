@@ -21,7 +21,13 @@ private:
 };
 
 class Server {
+public:
+    Server() {}
+    virtual ~Server() {}
+    int Start();
 
+private:
+    ServerOption *opt;
 };
 
 
