@@ -1,0 +1,106 @@
+\hypertarget{structev__loop}{}\section{ev\+\_\+loop Struct Reference}
+\label{structev__loop}\index{ev\+\_\+loop@{ev\+\_\+loop}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structev__loop_af70c9204d60291f61193b3a35d0933fa}{}\label{structev__loop_af70c9204d60291f61193b3a35d0933fa} 
+{\bfseries V\+A\+Rx} (ev\+\_\+tstamp, now\+\_\+floor) V\+A\+Rx(ev\+\_\+tstamp
+\item 
+\hypertarget{structev__loop_ae65ba4dee55622a0c747d1af4fef6688}{}\label{structev__loop_ae65ba4dee55622a0c747d1af4fef6688} 
+mn\+\_\+now {\bfseries V\+A\+Rx} (ev\+\_\+tstamp, rtmn\+\_\+diff) V\+A\+Rx(\hyperlink{structev__watcher}{W} $\ast$
+\item 
+\hypertarget{structev__loop_a0236d9293613ac338e4d9229929ee4c0}{}\label{structev__loop_a0236d9293613ac338e4d9229929ee4c0} 
+mn\+\_\+now rfeeds {\bfseries V\+A\+Rx} (int, rfeedmax) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_ab45749dd490b62f5020de7be6d2fe24b}{}\label{structev__loop_ab45749dd490b62f5020de7be6d2fe24b} 
+mn\+\_\+now rfeeds rfeedcnt {\bfseries V\+A\+Rx} (int, pendingpri) V\+A\+Rx(\hyperlink{structev__prepare}{ev\+\_\+prepare}
+\item 
+\hypertarget{structev__loop_a0be1bf5667b27afedb5e8322811e980a}{}\label{structev__loop_a0be1bf5667b27afedb5e8322811e980a} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w {\bfseries V\+A\+Rx} (ev\+\_\+tstamp, io\+\_\+blocktime) V\+A\+Rx(ev\+\_\+tstamp
+\item 
+\hypertarget{structev__loop_a81f7380917590214e2632eafeb7e562c}{}\label{structev__loop_a81f7380917590214e2632eafeb7e562c} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime {\bfseries V\+A\+Rx} (int, backend) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_aa56a1452e06b0cfa8d0846000e18a975}{}\label{structev__loop_aa56a1452e06b0cfa8d0846000e18a975} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt {\bfseries V\+A\+Rx} (E\+V\+\_\+\+A\+T\+O\+M\+I\+C\+\_\+T, loop\+\_\+done) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_ac2b18e50e559e782902ab4186dc023c4}{}\label{structev__loop_ac2b18e50e559e782902ab4186dc023c4} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd {\bfseries V\+A\+Rx} (ev\+\_\+tstamp, backend\+\_\+mintime) V\+AR(backend\+\_\+modify
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structev__loop_a79e0d7a93635df5af6b3d5ee7d0dd613}{}\label{structev__loop_a79e0d7a93635df5af6b3d5ee7d0dd613} 
+ev\+\_\+tstamp {\bfseries ev\+\_\+rt\+\_\+now}
+\item 
+\hypertarget{structev__loop_a638f5a179e4fdca869beb879625038bd}{}\label{structev__loop_a638f5a179e4fdca869beb879625038bd} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$ {\bfseries backend\+\_\+modify} )(E\+V\+\_\+\+P\+\_\+ int fd, int oev, int nev)) V\+AR(backend\+\_\+poll
+\item 
+\hypertarget{structev__loop_a1214578019211e37965bee8bee4422a5}{}\label{structev__loop_a1214578019211e37965bee8bee4422a5} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$ {\bfseries backend\+\_\+poll} )(E\+V\+\_\+\+P\+\_\+ ev\+\_\+tstamp timeout)) V\+A\+Rx(\hyperlink{struct_a_n_f_d}{A\+N\+FD} $\ast$
+\item 
+\hypertarget{structev__loop_a4f38d64993c8d90bac02b5af805cb7f7}{}\label{structev__loop_a4f38d64993c8d90bac02b5af805cb7f7} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfd {\bfseries V\+A\+Rx} )(int, anfdmax) V\+A\+Rx(\hyperlink{structev__io}{ev\+\_\+io}
+\item 
+\hypertarget{structev__loop_ace4c219a8e711d707721a502cc2783aa}{}\label{structev__loop_ace4c219a8e711d707721a502cc2783aa} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+ {\bfseries V\+A\+Rx} )(E\+V\+\_\+\+A\+T\+O\+M\+I\+C\+\_\+T, pipe\+\_\+write\+\_\+wanted) V\+A\+Rx(E\+V\+\_\+\+A\+T\+O\+M\+I\+C\+\_\+T
+\item 
+\hypertarget{structev__loop_a3f00c5b63790f7ad669b81af249c2e0c}{}\label{structev__loop_a3f00c5b63790f7ad669b81af249c2e0c} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skippe {\bfseries V\+A\+Rx} )(pid\+\_\+t, curpid) V\+A\+Rx(char
+\item 
+\hypertarget{structev__loop_a849bac09bf792abde809542ef5c8bb68}{}\label{structev__loop_a849bac09bf792abde809542ef5c8bb68} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfor {\bfseries V\+A\+Rx} )(int $\ast$, fdchanges) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_a0fa9e47acaf81489e0dd8bc5b90dd254}{}\label{structev__loop_a0fa9e47acaf81489e0dd8bc5b90dd254} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangema {\bfseries V\+A\+Rx} )(int, fdchangecnt) V\+A\+Rx(\hyperlink{struct_a_n_h_e}{A\+N\+HE} $\ast$
+\item 
+\hypertarget{structev__loop_a6f56555476bcf149cbdcffb172f48319}{}\label{structev__loop_a6f56555476bcf149cbdcffb172f48319} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timer {\bfseries V\+A\+Rx} )(int, timermax) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_a4743a441179a66c19db719bcb9726abd}{}\label{structev__loop_a4743a441179a66c19db719bcb9726abd} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercn {\bfseries V\+A\+Rx} )(\hyperlink{struct_a_n_h_e}{A\+N\+HE} $\ast$, periodics) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_ae7f845d72a332dc09fc58bc9bff84c5f}{}\label{structev__loop_ae7f845d72a332dc09fc58bc9bff84c5f} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicma {\bfseries V\+A\+Rx} )(int, periodiccnt) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_a5943a455162c6f045b8653971c6b2ada}{}\label{structev__loop_a5943a455162c6f045b8653971c6b2ada} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleal {\bfseries V\+A\+Rx} )(struct \hyperlink{structev__prepare}{ev\+\_\+prepare} $\ast$$\ast$, prepares) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_adf89c4ecb8abadec6860df9077bc1b93}{}\label{structev__loop_adf89c4ecb8abadec6860df9077bc1b93} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleall preparema {\bfseries V\+A\+Rx} )(int, preparecnt) V\+A\+Rx(struct \hyperlink{structev__check}{ev\+\_\+check} $\ast$$\ast$
+\item 
+\hypertarget{structev__loop_a4385a0d394340966d4536baffcf78a94}{}\label{structev__loop_a4385a0d394340966d4536baffcf78a94} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleall preparemax check {\bfseries V\+A\+Rx} )(int, checkmax) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_a6b457b9b4e0643f6b322cf5f44815e27}{}\label{structev__loop_a6b457b9b4e0643f6b322cf5f44815e27} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleall preparemax checks checkcn {\bfseries V\+A\+Rx} )(struct \hyperlink{structev__fork}{ev\+\_\+fork} $\ast$$\ast$, forks) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_a2b95ab2c8bc3f04480910fd8c6b64038}{}\label{structev__loop_a2b95ab2c8bc3f04480910fd8c6b64038} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleall preparemax checks checkcnt forkma {\bfseries V\+A\+Rx} )(int, forkcnt) V\+A\+Rx(struct \hyperlink{structev__cleanup}{ev\+\_\+cleanup} $\ast$$\ast$
+\item 
+\hypertarget{structev__loop_a72a84b14c2418a71a23c07d32dcbaa02}{}\label{structev__loop_a72a84b14c2418a71a23c07d32dcbaa02} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleall preparemax checks checkcnt forkmax cleanup {\bfseries V\+A\+Rx} )(int, cleanupmax) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_ace8faa58e25a8b0baeea8d166c1ccce1}{}\label{structev__loop_ace8faa58e25a8b0baeea8d166c1ccce1} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleall preparemax checks checkcnt forkmax cleanups cleanupcn {\bfseries V\+A\+Rx} )(E\+V\+\_\+\+A\+T\+O\+M\+I\+C\+\_\+T, async\+\_\+pending) V\+A\+Rx(struct \hyperlink{structev__async}{ev\+\_\+async} $\ast$$\ast$
+\item 
+\hypertarget{structev__loop_a7eedbc2d379e8466b07171230fd401ba}{}\label{structev__loop_a7eedbc2d379e8466b07171230fd401ba} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleall preparemax checks checkcnt forkmax cleanups cleanupcnt async {\bfseries V\+A\+Rx} )(int, asyncmax) V\+A\+Rx(int
+\item 
+\hypertarget{structev__loop_a438c33f65e110684ca3939d0d8e4f8a2}{}\label{structev__loop_a438c33f65e110684ca3939d0d8e4f8a2} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleall preparemax checks checkcnt forkmax cleanups cleanupcnt asyncs asynccn {\bfseries V\+A\+Rx} )(E\+V\+\_\+\+A\+T\+O\+M\+I\+C\+\_\+T, sig\+\_\+pending) V\+A\+Rx(unsigned int
+\item 
+\hypertarget{structev__loop_a11bb08304f0f56cdec463e295b0c9681}{}\label{structev__loop_a11bb08304f0f56cdec463e295b0c9681} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleall preparemax checks checkcnt forkmax cleanups cleanupcnt asyncs asynccnt origflag {\bfseries V\+A\+Rx} )(unsigned int, loop\+\_\+count) V\+A\+Rx(unsigned int
+\item 
+\hypertarget{structev__loop_ad26ec14f78b12783aa70ae5102bce964}{}\label{structev__loop_ad26ec14f78b12783aa70ae5102bce964} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleall preparemax checks checkcnt forkmax cleanups cleanupcnt asyncs asynccnt origflags loop\+\_\+dept {\bfseries V\+A\+Rx} )(void $\ast$, userdata) V\+AR(release\+\_\+cb
+\item 
+\hypertarget{structev__loop_aee33fe4c236c060160b1c589551c14d9}{}\label{structev__loop_aee33fe4c236c060160b1c589551c14d9} 
+mn\+\_\+now rfeeds rfeedcnt pending\+\_\+w timeout\+\_\+blocktime activecnt backend\+\_\+fd void($\ast$) void($\ast$) anfds pipe\+\_\+w pipe\+\_\+write\+\_\+skipped postfork fdchangemax timers timercnt periodicmax idleall preparemax checks checkcnt forkmax cleanups cleanupcnt asyncs asynccnt origflags loop\+\_\+depth void($\ast$ {\bfseries release\+\_\+cb} )(E\+V\+\_\+P) E\+V\+\_\+\+T\+H\+R\+OW) V\+AR(acquire\+\_\+cb
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ev.\+c\end{DoxyCompactItemize}

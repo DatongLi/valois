@@ -1,0 +1,67 @@
+\hypertarget{structev_1_1base}{}\section{ev\+:\+:base$<$ ev\+\_\+watcher, watcher $>$ Struct Template Reference}
+\label{structev_1_1base}\index{ev\+::base$<$ ev\+\_\+watcher, watcher $>$@{ev\+::base$<$ ev\+\_\+watcher, watcher $>$}}
+Inheritance diagram for ev\+:\+:base$<$ ev\+\_\+watcher, watcher $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structev_1_1base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structev_1_1base_acd2c4ed63d3d85fe1503c6a6af79f51f}{}\label{structev_1_1base_acd2c4ed63d3d85fe1503c6a6af79f51f} 
+void {\bfseries set} (E\+V\+\_\+P)  throw ()
+\item 
+\hypertarget{structev_1_1base_ab7bfdea240e4e074f69a330b21839d12}{}\label{structev_1_1base_ab7bfdea240e4e074f69a330b21839d12} 
+{\bfseries base} (E\+V\+\_\+\+PX)  throw ()
+\item 
+\hypertarget{structev_1_1base_af0230caac76aec855cafc1e4a3d8e175}{}\label{structev_1_1base_af0230caac76aec855cafc1e4a3d8e175} 
+void {\bfseries set\+\_\+} (const void $\ast$data, void($\ast$cb)(E\+V\+\_\+\+P\+\_\+ \hyperlink{structev__watcher}{ev\+\_\+watcher} $\ast$w, int revents))  throw ()
+\item 
+\hypertarget{structev_1_1base_aadf4502b7360ca663e9d841d5a8f707a}{}\label{structev_1_1base_aadf4502b7360ca663e9d841d5a8f707a} 
+{\footnotesize template$<$void($\ast$)(watcher \&w, int) function$>$ }\\void {\bfseries set} (void $\ast$data=0)  throw ()
+\item 
+\hypertarget{structev_1_1base_a080c40e6b23fd8027c7a92c218164158}{}\label{structev_1_1base_a080c40e6b23fd8027c7a92c218164158} 
+{\footnotesize template$<$class K , void(\+K\+::$\ast$)(watcher \&w, int) method$>$ }\\void {\bfseries set} (K $\ast$object)  throw ()
+\item 
+\hypertarget{structev_1_1base_a8c76c4def5296155bdc75119628ba6cc}{}\label{structev_1_1base_a8c76c4def5296155bdc75119628ba6cc} 
+{\footnotesize template$<$class K $>$ }\\void {\bfseries set} (K $\ast$object)  throw ()
+\item 
+\hypertarget{structev_1_1base_a080c40e6b23fd8027c7a92c218164158}{}\label{structev_1_1base_a080c40e6b23fd8027c7a92c218164158} 
+{\footnotesize template$<$class K , void(\+K\+::$\ast$)() method$>$ }\\void {\bfseries set} (K $\ast$object)  throw ()
+\item 
+\hypertarget{structev_1_1base_ac4075a29836b2b4f55010e83ce35a38c}{}\label{structev_1_1base_ac4075a29836b2b4f55010e83ce35a38c} 
+void {\bfseries operator()} (int events=E\+V\+\_\+\+U\+N\+D\+EF)
+\item 
+\hypertarget{structev_1_1base_ad05881991b3f36232ec5e62ac11a12c3}{}\label{structev_1_1base_ad05881991b3f36232ec5e62ac11a12c3} 
+bool {\bfseries is\+\_\+active} () const  throw ()
+\item 
+\hypertarget{structev_1_1base_ada2222858acbaa831ddea15eee7c9275}{}\label{structev_1_1base_ada2222858acbaa831ddea15eee7c9275} 
+bool {\bfseries is\+\_\+pending} () const  throw ()
+\item 
+\hypertarget{structev_1_1base_af7e3eb231cd60757cc2c5f97c5ab1015}{}\label{structev_1_1base_af7e3eb231cd60757cc2c5f97c5ab1015} 
+void {\bfseries feed\+\_\+event} (int revents)  throw ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structev_1_1base_af92ff4c3ec97e0c58ed6e31ebda29f06}{}\label{structev_1_1base_af92ff4c3ec97e0c58ed6e31ebda29f06} 
+{\footnotesize template$<$void($\ast$)(watcher \&w, int) function$>$ }\\static void {\bfseries function\+\_\+thunk} (E\+V\+\_\+\+P\+\_\+ \hyperlink{structev__watcher}{ev\+\_\+watcher} $\ast$w, int revents)
+\item 
+\hypertarget{structev_1_1base_a92dcb320feed5317236bf538ad5b271d}{}\label{structev_1_1base_a92dcb320feed5317236bf538ad5b271d} 
+{\footnotesize template$<$class K , void(\+K\+::$\ast$)(watcher \&w, int) method$>$ }\\static void {\bfseries method\+\_\+thunk} (E\+V\+\_\+\+P\+\_\+ \hyperlink{structev__watcher}{ev\+\_\+watcher} $\ast$w, int revents)
+\item 
+\hypertarget{structev_1_1base_a50317e6868452f61444c9e2c79ae8aae}{}\label{structev_1_1base_a50317e6868452f61444c9e2c79ae8aae} 
+{\footnotesize template$<$class K , void(\+K\+::$\ast$)() method$>$ }\\static void {\bfseries method\+\_\+noargs\+\_\+thunk} (E\+V\+\_\+\+P\+\_\+ \hyperlink{structev__watcher}{ev\+\_\+watcher} $\ast$w, int revents)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structev_1_1base_a816642e2a857014212eae34d9696abda}{}\label{structev_1_1base_a816642e2a857014212eae34d9696abda} 
+{\bfseries E\+V\+\_\+\+PX}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ev++.\+h\end{DoxyCompactItemize}
