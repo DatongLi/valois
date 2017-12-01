@@ -11,6 +11,7 @@
 #include <cstdio>
 #include <cstddef>
 #include <string>
+#include <cstring>
 
 namespace common{
 
@@ -81,7 +82,7 @@ struct Buffer {
 		pos = 0;
 		len = nbytes;
 		data = new char[nbytes];
-		memcpy(data, bytes, nbytes);
+        std::memcpy(data, bytes, nbytes);
 	}
 
 	virtual ~Buffer() {
