@@ -5,7 +5,7 @@
 		<Option title="Project"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="clang"/>
-		<Option virtualFolders="CMake Files\;CMake Files\thirdparty\;CMake Files\thirdparty\googlemock\;CMake Files\thirdparty\googletest\;CMake Files\thirdparty\googletest\cmake\;CMake Files\thirdparty\gflags\;CMake Files\thirdparty\gflags\cmake\;CMake Files\thirdparty\gflags\src\;CMake Files\mempool\;CMake Files\threadpool\;CMake Files\net\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\thirdparty\;CMake Files\thirdparty\googlemock\;CMake Files\thirdparty\googletest\;CMake Files\thirdparty\googletest\cmake\;CMake Files\thirdparty\gflags\;CMake Files\thirdparty\gflags\cmake\;CMake Files\thirdparty\gflags\src\;CMake Files\thirdparty\glog\;CMake Files\thirdparty\glog\cmake\;CMake Files\thirdparty\glog\src\;CMake Files\thirdparty\glog\src\glog\;CMake Files\net_ev\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/baidu/Desktop/workspace/valois"/>
@@ -47,11 +47,11 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="list_install_components">
+			<Target title="package_source">
 				<Option working_dir="/Users/baidu/Desktop/workspace/valois"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 package_source"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 clean"/>
@@ -77,47 +77,21 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test/gtest_test">
-				<Option output="/Users/baidu/Desktop/workspace/valois/output/test/gtest_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="output"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="clang"/>
-				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/baidu/Desktop/workspace/valois"/>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 test/gtest_test"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 list_install_components"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test/gtest_test/fast">
-				<Option output="/Users/baidu/Desktop/workspace/valois/output/test/gtest_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="output"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="clang"/>
-				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
+			<Target title="package">
+				<Option working_dir="/Users/baidu/Desktop/workspace/valois"/>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 test/gtest_test/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 package"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/Makefile&quot;  VERBOSE=1 clean"/>
@@ -130,7 +104,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
@@ -156,7 +129,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
@@ -182,7 +154,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
@@ -208,7 +179,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
@@ -234,7 +204,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -258,7 +227,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -282,7 +250,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -306,7 +273,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -332,7 +298,6 @@
 				<Compiler>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
 					<Add option="-DNO_THREADS"/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/include/gflags"/>
@@ -359,7 +324,6 @@
 				<Compiler>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
 					<Add option="-DNO_THREADS"/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/include/gflags"/>
@@ -377,17 +341,440 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test/TestMempool">
-				<Option output="/Users/baidu/Desktop/workspace/valois/mempool/output/test/TestMempool" prefix_auto="0" extension_auto="0"/>
+			<Target title="signalhandler_unittest">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/signalhandler_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 signalhandler_unittest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="signalhandler_unittest/fast">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/signalhandler_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 signalhandler_unittest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stacktrace_unittest">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/stacktrace_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 stacktrace_unittest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stacktrace_unittest/fast">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/stacktrace_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 stacktrace_unittest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="symbolize_unittest">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/symbolize_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 symbolize_unittest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="symbolize_unittest/fast">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/symbolize_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 symbolize_unittest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stl_logging_unittest">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/stl_logging_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLOG_STL_LOGGING_FOR_UNORDERED"/>
+					<Add option="-DGLOG_STL_LOGGING_FOR_EXT_HASH"/>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 stl_logging_unittest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stl_logging_unittest/fast">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/stl_logging_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGLOG_STL_LOGGING_FOR_UNORDERED"/>
+					<Add option="-DGLOG_STL_LOGGING_FOR_EXT_HASH"/>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 stl_logging_unittest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glog">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/libglog.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 glog"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glog/fast">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/libglog.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 glog/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="utilities_unittest">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/utilities_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 utilities_unittest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="utilities_unittest/fast">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/utilities_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 utilities_unittest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="logging_unittest">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/logging_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 logging_unittest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="logging_unittest/fast">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/logging_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 logging_unittest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Nightly">
+				<Option working_dir="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 Nightly"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Continuous">
+				<Option working_dir="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 Continuous"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="demangle_unittest">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/demangle_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 demangle_unittest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="demangle_unittest/fast">
+				<Option output="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/output/demangle_unittest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="output"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 demangle_unittest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Experimental">
+				<Option working_dir="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 Experimental"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/thirdparty/glog/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="EchoClient">
+				<Option output="/Users/baidu/Desktop/workspace/valois/net_ev/output/EchoClient" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="output"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
 				<Compiler>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/mempool/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/libev/include"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/net_ev/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/net_ev/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/include"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
@@ -396,23 +783,28 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/mempool/Makefile&quot;  VERBOSE=1 test/TestMempool"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/mempool/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/mempool/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/mempool/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 EchoClient"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test/TestMempool/fast">
-				<Option output="/Users/baidu/Desktop/workspace/valois/mempool/output/test/TestMempool" prefix_auto="0" extension_auto="0"/>
+			<Target title="EchoClient/fast">
+				<Option output="/Users/baidu/Desktop/workspace/valois/net_ev/output/EchoClient" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="output"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
 				<Compiler>
 					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/mempool/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/libev/include"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/net_ev/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/net_ev/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/include"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
@@ -421,21 +813,28 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/mempool/Makefile&quot;  VERBOSE=1 test/TestMempool/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/mempool/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/mempool/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/mempool/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 EchoClient/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test/TestThreadpool">
-				<Option output="/Users/baidu/Desktop/workspace/valois/threadpool/output/test/TestThreadpool" prefix_auto="0" extension_auto="0"/>
+			<Target title="EchoServer">
+				<Option output="/Users/baidu/Desktop/workspace/valois/net_ev/output/EchoServer" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="output"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
 				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/threadpool/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/libev/include"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/net_ev/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/net_ev/."/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/include"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
@@ -444,21 +843,28 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/threadpool/Makefile&quot;  VERBOSE=1 test/TestThreadpool"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/threadpool/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/threadpool/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/threadpool/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 EchoServer"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test/TestThreadpool/fast">
-				<Option output="/Users/baidu/Desktop/workspace/valois/threadpool/output/test/TestThreadpool" prefix_auto="0" extension_auto="0"/>
+			<Target title="EchoServer/fast">
+				<Option output="/Users/baidu/Desktop/workspace/valois/net_ev/output/EchoServer" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="output"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
 				<Compiler>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add option="-DGOOGLE_GLOG_DLL_DECL="/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/threadpool/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/libev/include"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/net_ev/src"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/net_ev/."/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/include"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog"/>
+					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
@@ -467,81 +873,18 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/threadpool/Makefile&quot;  VERBOSE=1 test/TestThreadpool/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/threadpool/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/threadpool/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/threadpool/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="unittest/TEST_ADD">
-				<Option output="/Users/baidu/Desktop/workspace/valois/net/output/unittest/TEST_ADD" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="output"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="clang"/>
-				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/net/src"/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 unittest/TEST_ADD"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="unittest/TEST_ADD/fast">
-				<Option output="/Users/baidu/Desktop/workspace/valois/net/output/unittest/TEST_ADD" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="output"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="clang"/>
-				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/net/src"/>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 unittest/TEST_ADD/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 EchoServer/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/baidu/Desktop/workspace/valois/net_ev/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/mempool/example/TestMempool.cpp">
-			<Option target="test/TestMempool"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/net_ev/src/Client.cpp">
+			<Option target="EchoClient"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/net/src/t.cpp">
-			<Option target="unittest/TEST_ADD"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/net/src/t.h">
-			<Option target="unittest/TEST_ADD"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/net/unittest/TEST_ADD.cpp">
-			<Option target="unittest/TEST_ADD"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/test/test.cpp">
-			<Option target="test/gtest_test"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/test/test.h">
-			<Option target="test/gtest_test"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/test/unittest/gtest_test.cpp">
-			<Option target="test/gtest_test"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/net_ev/src/Server.cpp">
+			<Option target="EchoServer"/>
 		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/include/gflags/config.h">
 			<Option target="gflags_nothreads_static"/>
@@ -570,6 +913,84 @@
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src/util.h">
 			<Option target="gflags_nothreads_static"/>
 		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/config.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/glog/logging.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/glog/raw_logging.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/glog/stl_logging.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/glog/vlog_is_on.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/base/commandlineflags.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/base/googleinit.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/base/mutex.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/demangle.cc">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/demangle.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/demangle_unittest.cc">
+			<Option target="demangle_unittest"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/log_severity.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/logging.cc">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/logging_unittest.cc">
+			<Option target="logging_unittest"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/raw_logging.cc">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/signalhandler.cc">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/signalhandler_unittest.cc">
+			<Option target="signalhandler_unittest"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/stacktrace_unittest.cc">
+			<Option target="stacktrace_unittest"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/stl_logging_unittest.cc">
+			<Option target="stl_logging_unittest"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/symbolize.cc">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/symbolize.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/symbolize_unittest.cc">
+			<Option target="symbolize_unittest"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/utilities.cc">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/utilities.h">
+			<Option target="glog"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/utilities_unittest.cc">
+			<Option target="utilities_unittest"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/vlog_is_on.cc">
+			<Option target="glog"/>
+		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 			<Option target="gmock_main"/>
@@ -585,21 +1006,9 @@
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/threadpool/example/TestThreadpool.cpp">
-			<Option target="test/TestThreadpool"/>
-		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\thirdparty\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\thirdparty\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\thirdparty\googlemock\"/>
-		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\thirdparty\googlemock\"/>
 		</Unit>
@@ -615,12 +1024,6 @@
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\thirdparty\googletest\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\thirdparty\googletest\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\thirdparty\googletest\cmake\"/>
-		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\thirdparty\googletest\cmake\"/>
 		</Unit>
@@ -635,24 +1038,6 @@
 		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\thirdparty\gflags\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/utils.cmake">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/config.cmake.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/version.cmake.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/package.pc.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/config.cmake.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
 		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/utils.cmake">
 			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
@@ -708,26 +1093,56 @@
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src/config.h.in">
 			<Option virtualFolder="CMake Files\thirdparty\gflags\src\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src/gflags.h.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\src\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thirdparty\glog\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src/gflags_declare.h.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\src\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/glog-config.cmake.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src/gflags_completions.h.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\src\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thirdparty\glog\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src/config.h.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\src\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/glog-config.cmake.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/mempool/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\mempool\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/cmake/DetermineGflagsNamespace.cmake">
+			<Option virtualFolder="CMake Files\thirdparty\glog\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/threadpool/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\threadpool\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/cmake/DetermineGflagsNamespace.cmake">
+			<Option virtualFolder="CMake Files\thirdparty\glog\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/net/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\net\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/config.h.cmake.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/config.h.cmake.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/raw_logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/stl_logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/vlog_is_on.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/raw_logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/stl_logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/vlog_is_on.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/net_ev/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\net_ev\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

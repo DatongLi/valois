@@ -11,11 +11,13 @@ endif()
 add_subdirectory( thirdparty/googlemock )
 add_subdirectory( thirdparty/gflags )
 add_subdirectory( thirdparty/glog )
+
 include_directories(${GFLAGS_INCLUDE_DIR})
 link_libraries(gflags)
 link_libraries(glog)
-include_directories(thirdparty/protobuf/include)
-link_libraries(thirdparty/protobuf/lib)
+
+#include_directories(thirdparty/protobuf/include)
+#link_libraries(thirdparty/protobuf/lib)
 
 #set(BOOST_ROOT "thirdparty/boost")
 #set(Boost_DEBUG OFF)
@@ -27,9 +29,14 @@ link_libraries(thirdparty/protobuf/lib)
 
 include_directories(.)
 
-add_subdirectory(mempool)
-add_subdirectory(threadpool)
-add_subdirectory(net)
+#add_subdirectory(mempool)
+#add_subdirectory(threadpool)
+#add_subdirectory(net)
+
+include_directories(thirdparty/libev/include)
+#link_directories(thirdparty/libev/lib)
+FIND_LIBRARY(EV_LIB ev thirdparty/libev/lib NO_DEFAULT_EV_PATH)
+add_subdirectory(net_ev)
 
 set(dir output)
 file(MAKE_DIRECTORY ${dir})

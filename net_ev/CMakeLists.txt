@@ -1,0 +1,12 @@
+include_directories(src .)
+set(dir output)
+file(MAKE_DIRECTORY ${dir})
+file(MAKE_DIRECTORY ${dir}/test)
+file(MAKE_DIRECTORY ${dir}/unittest)
+
+add_executable(EchoServer src/Server.cpp)
+add_executable(EchoClient src/Client.cpp)
+target_link_libraries(EchoServer ${EV_LIB})
+target_link_libraries(EchoClient ${EV_LIB})
+#target_link_libraries(unittest/TEST_POLL gtest_main gtest gflags)
+#add_test(NAME unittest/TEST_POLL COMMAND unittest/TEST_POLL)

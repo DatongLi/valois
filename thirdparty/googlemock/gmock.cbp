@@ -5,7 +5,7 @@
 		<Option title="gmock"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="clang"/>
-		<Option virtualFolders="CMake Files\;CMake Files\thirdparty\;CMake Files\thirdparty\googlemock\;CMake Files\thirdparty\googletest\;CMake Files\thirdparty\googletest\cmake\;CMake Files\thirdparty\gflags\;CMake Files\thirdparty\gflags\cmake\;CMake Files\thirdparty\gflags\src\;CMake Files\mempool\;CMake Files\threadpool\;CMake Files\net\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\thirdparty\;CMake Files\thirdparty\googlemock\;CMake Files\thirdparty\googletest\;CMake Files\thirdparty\googletest\cmake\;CMake Files\thirdparty\gflags\;CMake Files\thirdparty\gflags\cmake\;CMake Files\thirdparty\gflags\src\;CMake Files\thirdparty\glog\;CMake Files\thirdparty\glog\cmake\;CMake Files\thirdparty\glog\src\;CMake Files\thirdparty\glog\src\glog\;CMake Files\net_ev\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock"/>
@@ -24,7 +24,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
@@ -50,7 +49,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
@@ -76,7 +74,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
@@ -102,7 +99,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
@@ -128,7 +124,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -152,7 +147,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -176,7 +170,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -200,7 +193,6 @@
 				<Option type="2"/>
 				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/Users/baidu/Desktop/workspace/valois/."/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/include"/>
 					<Add directory="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
@@ -236,15 +228,6 @@
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\thirdparty\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\thirdparty\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\thirdparty\googlemock\"/>
-		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\thirdparty\googlemock\"/>
 		</Unit>
@@ -260,12 +243,6 @@
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\thirdparty\googletest\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\thirdparty\googletest\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\thirdparty\googletest\cmake\"/>
-		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\thirdparty\googletest\cmake\"/>
 		</Unit>
@@ -280,24 +257,6 @@
 		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\thirdparty\gflags\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/utils.cmake">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/config.cmake.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/version.cmake.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/package.pc.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
-		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/config.cmake.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
 		</Unit>
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/cmake/utils.cmake">
 			<Option virtualFolder="CMake Files\thirdparty\gflags\cmake\"/>
@@ -353,26 +312,56 @@
 		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src/config.h.in">
 			<Option virtualFolder="CMake Files\thirdparty\gflags\src\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src/gflags.h.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\src\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thirdparty\glog\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src/gflags_declare.h.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\src\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/glog-config.cmake.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src/gflags_completions.h.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\src\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thirdparty\glog\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/gflags/src/config.h.in">
-			<Option virtualFolder="CMake Files\thirdparty\gflags\src\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/glog-config.cmake.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/mempool/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\mempool\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/cmake/DetermineGflagsNamespace.cmake">
+			<Option virtualFolder="CMake Files\thirdparty\glog\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/threadpool/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\threadpool\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/cmake/DetermineGflagsNamespace.cmake">
+			<Option virtualFolder="CMake Files\thirdparty\glog\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/baidu/Desktop/workspace/valois/net/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\net\"/>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/config.h.cmake.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/config.h.cmake.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/raw_logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/stl_logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/vlog_is_on.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/raw_logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/stl_logging.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/thirdparty/glog/src/glog/vlog_is_on.h.in">
+			<Option virtualFolder="CMake Files\thirdparty\glog\src\glog\"/>
+		</Unit>
+		<Unit filename="/Users/baidu/Desktop/workspace/valois/net_ev/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\net_ev\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

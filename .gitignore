@@ -62,3 +62,7 @@ thirdparty/gflags/test/CTestTestfile.cmake
 thirdparty/gflags/test/gflags_unittest-main.cc
 thirdparty/gflags/test/gflags_unittest_main.cc
 thirdparty/glog/Testing/
+net_ev/CMakeFiles
+net_ev/output
+net_ev/cmake_install.cmake
+net_ev/CMakeCache.txt

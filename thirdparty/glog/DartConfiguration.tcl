@@ -33,7 +33,7 @@ ScpCommand: /usr/bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/local/Cellar/cmake/3.8.2/bin/cmake" "/Users/baidu/Desktop/workspace/valois/thirdparty/glog"
+ConfigureCommand: "/Applications/CLion.app/Contents/bin/cmake/bin/cmake" "/Users/baidu/Desktop/workspace/valois/thirdparty/glog"
 MakeCommand: /Applications/CLion.app/Contents/bin/cmake/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
